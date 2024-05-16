@@ -22,8 +22,9 @@ html {
     background-color: rgb(141, 175, 175);
 }
 
+/* CONTÉUDO COM MARGEM */
 .container {
-    max-width: 1280px;
+    max-width: 1800px;
     margin: auto;
 }
 
@@ -33,13 +34,150 @@ html {
     justify-content: space-between;
 }
 
+/* LOGO NO HEADER */
 .logo-flashback {
     width: 200px;
 }
 
 header {
     width: 100%;
-    padding: 30px 4%;
+    padding: 20px 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 1s;
+
+    ul {
+        list-style-type: none;
+    }
+    li {
+        display: inline-block;
+        margin: 0 40px;
+    }
+    .navbar {
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        a:hover{
+            background: linear-gradient(to right, #a02ff2, #f74b6f);
+            color: #140535;
+            font-size: 20px;
+            transition: 0.5s
+        }
+    }
+    
+}
+
+header.rolagem {
+    padding: 10px 5%;
+    background: linear-gradient(to right, #a02ff2, #f74b6f);
+    transition: 1s;
+}
+
+#banner {
+    height: 100vh;
+    background-image: url(../assets/img/banner-star.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Menu com opções que desce (Eventos) */
+    /* dropdown */
+
+.dropdown {
+    transition: 2s;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    z-index: 1;
+
+    li {
+        align-self: flex-start;
+        display: flex; 
+    }
+
+}
+
+.navbar {
+    a {
+        padding: 6px 20px;
+        color:#ffffff;
+        transition: 0.5s;
+    }
+    a:hover {
+        border: 2px solid #ffffff; /* Borda */
+        border-radius: 30px; /* Borda arredondada */
+        color:#140535;
+        font-size: 20px;
+        transition: 0.5s;
+        /* transform: skew(5deg, 5deg); */
+    }
+    
+}
+
+.dropdown:hover .dropdown-content {
+    background-color: #140535;
+    width: 300px;
+    padding: 10px 0; 
+    background: linear-gradient(to right, #a02ff2, #f74b6f);
+    color:#EA49A2;
+    margin-left: -10px;
+    display: flex;
+    flex-direction: column;
+    transition: 2s;
+} 
+
+
+.btn-1  {
+    border: 2px solid #ffffff; /* Borda */
+    background-color: #14053500;
+    color: #ffffff; /* Cor do texto */
+    padding: 6px 28px; /* Espaçamento interno */
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none; /* Remove a decoração de texto */
+    display: inline-block; /* Exibe o botão como um elemento em linha */
+    font-size: 16px; /* Tamanho do texto */
+    margin: 4px 2px; /* Margem entre os botões */
+    cursor: pointer; /* Cursor do mouse */
+    border-radius: 10px; /* Borda arredondada */
+    transition: 0.5s;
+}
+
+.btn-1:hover  {
+    background: linear-gradient(to right, #a02ff2, #f74b6f);
+    border-radius: 30px; /* Borda arredondada */
+    transition: 0.5s;
+    color: #140535;
+    font-size: 20px;
+}
+
+.btn-2  {
+    border: 2px solid #140535; /* Borda */
+    background-color: #140535; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+    padding: 6px 28px; /* Espaçamento interno */
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none; /* Remove a decoração de texto */
+    display: inline-block; /* Exibe o botão como um elemento em linha */
+    font-size: 16px; /* Tamanho do texto */
+    margin: 4px 2px; /* Margem entre os botões */
+    cursor: pointer; /* Cursor do mouse */
+    border-radius: 10px; /* Borda arredondada */
+    transition: 0.5s;
+}
+
+.btn-2:hover  {
+    border: 2px solid #ffffff;
+    background: linear-gradient(to right, #a02ff2, #f74b6f);
+    border-radius: 30px; /* Borda arredondada */
+    transition: 0.5s;
+    color: #140535;
+    font-size: 20px;
 }
 
 
