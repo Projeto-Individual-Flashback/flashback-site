@@ -21,19 +21,16 @@
         HEADER - (LOGO / LINKS DE NAVEGAÇÃO / BOTÕES 'CADASTRO' E 'LOGIN') 
     -->
     <header id="header">
-        <div class="container">
-            <div class="flex">
+        <div class="header-container">
+            <div class="header-flex">
                 <!-- LOGOS -->
                 <a href="#">
                     <img class="logo-flashback" src="../assets/img/logo-flashback.png" alt="">
                 </a>
-                <!-- GLOBO -->
-                <!-- <img class="gif" src="../assets/img/globo-gif.gif" alt=""> -->
                 <!-- LINKS DE NAVEGAÇÃO -->
                 <nav class="navbar">
                     <ul class="nav-list">
                         <li><a href="#sobre"> Sobre </a></li>
-                        <li><a href="#historia"> História </a></li>
                         <li><a href="#player"> Player </a></li>
                         <li class="dropdown">
                             <a href="#"> Eventos ▾</a>
@@ -47,33 +44,30 @@
                     </ul>
                 </nav>
                 <div class="div-btns">
-                    <button class="btn-1">Login</button>
-                    <button class="btn-2">Cadastre-se</button>
+                    <button class="btn-1 btn-pai">Login</button>
+                    <button class="btn-2 btn-pai">Cadastre-se</button>
                 </div> 
             </div>
         </div>
+        <!-- GLOBO -->
+        <img class="gif" src="../assets/img/globo-gif.gif" alt="">
     </header>
-    <!-- GLOBO -->
-    <img class="gif" src="../assets/img/globo-gif.gif" alt="">
-    
-
     <!-- 
         BANNER - (BANNER ROTATIVO / TITULO / BOTÃO 'SUCESSOS DA ÉPOCA') 
     -->
     <section id="banner">
         <div class="total">
             <!-- BANNER ANTERIOR -->
-            <button class="btn-1"><</button>
+            <button class="btn-banner1 btn-pai"><</button>
 
             <div class="banner-container">
                 <h2 class="titulo-banner">Embarque nessa viagem <br> <h1>Aos melhores anos da música</h1></h2>
             <a href="">
-                <button class="btn-2">Saiba Mais</button>
+                <button class="btn-2 btn-pai">Saiba Mais</button>
             </a>
             </div>
             <!-- BANNER PRÓXIMO -->
-            <button class="btn-1">></button>
-            
+            <button class="btn-banner1 btn-pai">></button>
         </div>
     </section>
 
@@ -81,19 +75,22 @@
         SOBRE - (IMAGEM / TEXTO EXPLICATIVO / BOTÃO 'SAIBA MAIS') 
     -->
     <section id="sobre">
-
+        <aside class="texto-sobre">
+            <h1>Sobre o Projeto</h1>
+            <h4>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque praesentium pariatur dolores quas totam delectus, nesciunt labore quis doloremque maxime perspiciatis distinctio similique quidem, aperiam asperiores, quasi tenetur libero nam voluptatum illum. Eaque quia reprehenderit cumque sit nisi architecto beatae doloremque accusamus vitae sed veritatis dolorum eveniet repellendus, at fuga?
+            </h4>
+            <button class="btn-2 btn-pai">
+                Saiba Mais
+            </button>
+        </aside>
+        <article>
+            <img width="600px"src="../assets/img/john-travolta.png" alt="">
+        </article>
     </section>
 
     <!-- 
-        HISTÓRIAS -
-        (TITULO / CARDS) 
-    -->
-    <section id="historia">
-
-    </section>
-
-    <!-- 
-        MUSICAS -
+        PLAYER -
         (IMAGEM DA MUSICA / TITULO DA MUSICA / ÁLBUM / ANO) 
         (BOTÕES 'VOLTAR MÚSICA', 'PLAY / PAUSE' E 'PRÓXIMA MÚSICA')
         (BOTÕES IMAGEM DO ARTISTA / BANDA / ANO DE NASCIMENTO E ANO DE MORTE)

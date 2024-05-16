@@ -7,16 +7,21 @@
     branco: #f4f4f4;
 */
 
+/* TODOS OS ELEMENTOS */ 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+/* PÁGINA */ 
 html {
-    height: 500vh;
+    /* height: 500vh; */
     background-color: #f4f4f4;
+}
+
+body {
+    overflow-x: hidden;
 }
 
 h1 {
@@ -27,13 +32,19 @@ h2 {
     font-size: 32px;
 }
 
-/* CONTÉUDO COM MARGEM */
-.container {
-    max-width: 1800px;
-    min-width: 1400px;
+h4 {
+    font-size: 16px;
 }
 
-.flex {
+
+
+/* CONTÉUDO COM MARGEM */
+.header-container {
+    justify-content: center;
+    width: 100%;
+}
+
+.header-flex {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -47,25 +58,28 @@ h2 {
 .gif {
     position: absolute;
     position: fixed;
-    width: 100px;
-    margin-left: 250px;
-    margin-top: 50px;
+    width: 10vh;
+    margin-left: 22vh;
+    margin-top: -7vh;
 }
 
 header {
     width: 100%;
-    padding: 20px 5%;
+    height: auto;
+    padding: 2% 5%;
     position: fixed;
     top: 0;
     left: 0;
     transition: 1s;
+
+    /* background-color: aqua; */
 
     ul {
         list-style-type: none;
     }
     li {
         display: inline-block;
-        margin: 0 40px;
+        margin: 0 2vh;
     }
     .navbar {
         a {
@@ -74,8 +88,6 @@ header {
             font-size: 16px;
         }
         a:hover{
-            /* background: linear-gradient(to right, #a02ff2, #f74b6f); */
-            /* color: #140535; */
             background-color: #140535;
             color: #a02ff2;
             font-size: 20px;
@@ -138,11 +150,15 @@ header.rolagem {
     transition: 2s;
 } 
 
-.btn-1  {
-    border: 2px solid #f4f4f4; /* Borda */
-    background-color: #14053500;
-    color: #f4f4f4; /* Cor do texto */
-    padding: 6px 28px; /* Espaçamento interno */
+.div-btns {
+    width: 22%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn-pai {
+    padding: 6px; /* Espaçamento interno */
     text-align: center; /* Alinhamento do texto */
     text-decoration: none; /* Remove a decoração de texto */
     display: inline-block; /* Exibe o botão como um elemento em linha */
@@ -153,21 +169,44 @@ header.rolagem {
     transition: 0.5s;
 }
 
-.btn-1:hover  {
-    /* background: linear-gradient(to right, #a02ff2, #f74b6f); */
-    /* color: #140535; */
-    background-color: #140535;
-    color: #a02ff2;
+.btn-pai:hover {
     border-radius: 30px; /* Borda arredondada */
     transition: 0.5s;
     font-size: 20px;
 }
 
+.btn-1  {
+    width: 40%;
+    border: 2px solid #f4f4f4; /* Borda */
+    background-color: #14053500;
+    color: #f4f4f4; /* Cor do texto */
+}
+
+.btn-1:hover  {
+    background-color: #140535;
+    color: #a02ff2;
+}
+
 .btn-2  {
+    width: 50%;
     border: 2px solid #a02ff2; /* Borda */
     background-color: #a02ff2; /* Cor de fundo */
     color: #f4f4f4; /* Cor do texto */
-    padding: 6px 28px; /* Espaçamento interno */
+}
+
+.btn-2:hover  {
+    border: 2px solid #f4f4f4;
+    background-color: #140535;
+    color: #a02ff2;
+}
+
+.btn-banner1 {
+    width: 3vw;
+    height: 6vh;
+    border: 2px solid #f4f4f4; /* Borda */
+    background-color: #14053500;
+    color: #f4f4f4; /* Cor do texto */
+    padding: 6px; /* Espaçamento interno */
     text-align: center; /* Alinhamento do texto */
     text-decoration: none; /* Remove a decoração de texto */
     display: inline-block; /* Exibe o botão como um elemento em linha */
@@ -177,10 +216,9 @@ header.rolagem {
     border-radius: 10px; /* Borda arredondada */
     transition: 0.5s;
 }
-.btn-2:hover  {
-    border: 2px solid #f4f4f4;
-    /* background: linear-gradient(to right, #a02ff2, #f74b6f); */
-    /* color: #140535; */
+
+
+.btn-banner1:hover {
     background-color: #140535;
     color: #a02ff2;
     border-radius: 30px; /* Borda arredondada */
@@ -206,14 +244,14 @@ header.rolagem {
     }
 
     .btn-2 {
-        margin-top: 50px;
+        margin-top: 3vh;
     }
 
     h1, h2 {
         color:#f4f4f4
     }
     .total {
-        width: 1700px;
+        width: 200vh;
         height: 80px;
         display: flex;
         flex-direction: row;
@@ -224,12 +262,37 @@ header.rolagem {
 
 #sobre {
     height: 85vh;
+    padding: 0 10%;
     background-color: #140535;
     background-position: center;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    
+    aside {
+        color:#f4f4f4;
+        width: 50vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        button {
+            width: 25%;
+        }
+
+    }
+    article {
+        margin-left: 5vw;
+        margin-right: -30vh;
+    }
+    img {
+        height: 100%;
+        border-radius: 50px;
+        
+    }
 }
 
 
