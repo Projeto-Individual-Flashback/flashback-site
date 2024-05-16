@@ -1,0 +1,30 @@
+<!-- <ul class="nav-list">
+                <li class="dropdown">
+                    <a href="#"> Sobre ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Motivação</a></li>
+                        <li><a href="#historia">História</a></li>
+                        <li><a href="#artistas">Artistas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#player"> Player </a></li>
+                <li class="dropdown">
+                    <a href="#"> Eventos ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#rockinrio">Rock in Rio 1985</a></li>
+                        <li><a href="#usaforafrica">USA for Africa</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"> Brasil </a></li>
+                <li><a href="#"> Boates </a></li>
+                <li class="dropdown">
+                    <a href="#"> Entretenimento ▾</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Temas de Filmes</a></li>
+                        <li><a href="#">Temas de Novelas</a></li>
+                        <li><a href="#">Temas no Esporte</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"> Agradecimentos </a></li>
+                <li><a href="#"> Quiz </a></li>
+            </ul> -->
