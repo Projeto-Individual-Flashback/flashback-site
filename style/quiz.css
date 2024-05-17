@@ -43,7 +43,14 @@ h4 {
 .gif {
     scale: .3;
     position: absolute;
-    margin-top: -25vh;
+    margin-top: -40vh;
+    transition: 1s;
+}
+
+.gif:hover {
+    scale: .4;
+    transition: 1s;
+    margin-top: -35vh;
 }
 
 .div-total {
@@ -70,10 +77,10 @@ h4 {
             margin-right: 10vh;
         }
 
-        h1 {
+        h1, h4 {
             color: #f4f4f4;
         }
-        .btn-2  {
+        .btn2  {
             width: 100%; 
         }
         .btn-pai {
@@ -83,40 +90,46 @@ h4 {
             width: 100%; 
         }
     }
-    .botao1 {
-        margin-top: 5vh;
+
+    .conteudo-pergunta {
+        margin-top: 4vh;
+        margin-bottom: 10vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 5vh;
+        height: 8vh;
+        width: 50vh;
+        
+        img {
+            border-radius: 20px;
+        }
+        h4 {
+            color: #f4f4f4;
+            margin-left: 10vh;
+        }
+
+        h5 {
+            color: #f4f4f4;
+        }
+    }
+
+    .botao {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         h4 {
             color: #f4f4f4;
         }
     }
-
-    .botao2 {
-        margin-top: 5vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 5vh;
-
-        h4 {
-            color: #f4f4f4;
-        }
+    .opcao {
+        margin-top: 8vh;
+        height: 15vh;
     }
 
-    .botao3 {
+    .respostas {
         margin-top: 5vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 5vh;
-
-        h4 {
-            color: #f4f4f4;
-        }
+        height: 8vh;
     }
 
     .btn-pai {
@@ -137,30 +150,27 @@ h4 {
         transition: 0.5s;
         font-size: 20px;
     }
-
-    .btn-1  {
+    .btn1  {
         width: 100%;
         border: 2px solid #f4f4f4; /* Borda */
         background-color: #14053500;
         color: #f4f4f4; /* Cor do texto */
     }
-    
-    .btn-1:hover  {
+    .btn1:hover  {
         background-color: #140535;
         color: #a02ff2;
     }
     
-    .btn-2  {
+    .btn2  {
         width: 100%;
         border: 2px solid #a02ff2; /* Borda */
         background: linear-gradient(to right, #a02ff2, #f74b6f);
         color: #f4f4f4; /* Cor do texto */
     }
-    .btn-2:hover  {
+    .btn2:hover  {
         border: 2px solid #f4f4f4;
         background: #140535;
         color: #a02ff2;
     }
 
-    
 }

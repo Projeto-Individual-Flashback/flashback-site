@@ -36,6 +36,10 @@ h4 {
     font-size: 16px;
 }
 
+h5 {
+    font-size: 10px;
+}
+
 
 
 
@@ -61,8 +65,17 @@ h4 {
     position: absolute;
     position: fixed;
     width: 10vh;
-    margin-left: 17vh;
+    margin-left: 23vh;
     margin-top: -6vh;
+    z-index: 999;
+    transition: 1s;
+}
+
+.gif:hover {
+    width: 15vh;
+    margin-left: 20vh;
+    transition: 1s;
+    margin-top: -10vh;
 }
 
 header {
@@ -73,6 +86,8 @@ header {
     top: 0;
     left: 0;
     transition: 1s;
+    z-index: 998;
+
 
     /* background-color: aqua; */
 
@@ -138,7 +153,6 @@ header.rolagem {
         transition: 0.5s;
         /* transform: skew(5deg, 5deg); */
     }
-    
 }
 
 .dropdown:hover .dropdown-content {
@@ -171,6 +185,10 @@ header.rolagem {
     border-radius: 10px; /* Borda arredondada */
     transition: 0.5s;
     cursor: pointer;
+}
+
+.btn-slider {
+    scale: 2;
 }
 
 .btn-pai:hover {
@@ -319,10 +337,14 @@ header.rolagem {
     aside {
         color:#f4f4f4;
         width: 100vw;
-        height: 40vh;
+        height: 60vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        h1 {
+            margin-bottom: 5vh;
+        }
 
         button {
             width: 25%;
@@ -336,9 +358,17 @@ header.rolagem {
         border-radius: 25px;
     }
 }
+#eventos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f74b6f;
+    height: 12vh;
+    color: #f4f4f4;
+}
 
 #evento-rir {
-    height: 80vh;
+    height: 70vh;
     padding: 0 10%;
     background-color: #f4f4f4;
     background-position: center;
@@ -347,16 +377,16 @@ header.rolagem {
     align-items: center;
     color:#140535;
 
-    
     aside {
         width: 100vw;
-        height: 30vh;
+        height: 40vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
-        h1 {
+        h2 {
             color:#a02ff2;
+            margin-bottom: 5vh;
         }
 
         button {
@@ -376,7 +406,7 @@ header.rolagem {
 }
 
 #evento-ufa {
-    height: 80vh;
+    height: 70vh;
     padding: 0 10%;
     background-color: #f4f4f4;
     background-position: center;
@@ -388,13 +418,14 @@ header.rolagem {
     
     aside {
         width: 100vw;
-        height: 35vh;
+        height: 40vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
-        h1 {
+        h2 {
             color:#f74b6f;
+            margin-bottom: 5vh;
         }
 
         button {
@@ -413,15 +444,46 @@ header.rolagem {
     }
 }
 
+
 #player {
+    background-color: blue;
     height: 80vh;
-    padding: 0 10%;
-    background-color: #a02ff2;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:#f4f4f4;
+    .div-titulo {
+        background-color: #17cbad;
+        height: 20vh;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .div-conteudo {
+        background-color: #9273df;
+        height: 40vh;
+        background-position: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .div-conteudo-1 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #b4a5da;
+            height: 20vh;
+        }
+        
+        .div-conteudo-2 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #73f86a;
+            height: 20vh;
+        }
+    }
+    h1 {
+        background-color: #140535;
+        color:#f4f4f4;
+    }
 }
 
 #quiz {

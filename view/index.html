@@ -32,7 +32,7 @@
                     <ul class="nav-list">
                         <li><a href="#sobre"> Sobre </a></li>
                         <li class="dropdown">
-                            <a href="#evento-rir"> Eventos ▾</a>
+                            <a href="#eventos"> Eventos ▾</a>
                             <ul class="dropdown-content">
                                 <li><a href="#evento-rir">Rock in Rio 1985</a></li>
                                 <li><a href="#evento-ufa">USA for Africa</a></li>
@@ -40,7 +40,7 @@
                         </li>
                         <li><a href="#player"> Player </a></li>
                         <li><a href="#"> Boates </a></li>
-                        <li><a href="../view/quiz.html"> Quiz </a></li>
+                        <li><a href="../view/quiz-options.html"> Quiz </a></li>
                     </ul>
                 </nav>
                 <div class="div-btns">
@@ -56,10 +56,7 @@
         </div>
         <!-- GLOBO -->
         <img class="gif" src="../assets/img/globo-gif.gif" alt="gif-globo">
-
-        
     </header>
-
     <!-- 
         BANNER - (BANNER ROTATIVO / TITULO / BOTÃO 'SUCESSOS DA ÉPOCA') 
     -->
@@ -74,14 +71,14 @@
         <div class="slides">
             <img src="../assets/img/usaforafrica.png" alt="Slide 3">
         </div>
-    
+
         <a class="prev">
-            <button class="btn-pai">
+            <button class="btn-pai btn1 btn-slider">
                 &#10094;
             </button>
         </a>
         <a class="next">
-            <button class="btn-pai">
+            <button class="btn-pai btn1 btn-slider">
                 &#10095;
             </button>
         </a>
@@ -97,18 +94,24 @@
         SOBRE - (IMAGEM / TEXTO EXPLICATIVO / BOTÃO 'SAIBA MAIS') 
     -->
     <section id="sobre">
-        <aside class="texto-sobre">
+        <aside class="texto">
             <h1>Sobre o Projeto</h1>
             <h4>
                 A música tem o poder de nos contagiar, ouvimos uma canção e passamos a sentir o que o artista poderia estar sentindo no momento. Esses momentos podem ser de alegria, de emoção, de paixão e até de tristeza. Escutar uma nova música, conhecer artistas diferentes e se atualizar sobre novos talentos é legal, mas nada se compara a escutar velhas canções, músicas que te levam a momentos de nostalgia inesquecíveis. E as músicas antigas tem esse poder em minha vida, elas me levam a um mundo onde tudo parece mais leve e feliz. Por isso, fiz esse projeto, não com o intuito de menosprezar as músicas atuais, porém com o propósito de valorizar músicas que ainda tocam no coração de muitas pessoas.
             </h4>
-            <button class="btn2 btn-pai">
+            <!-- <button class="btn2 btn-pai">
                 Saiba Mais
-            </button>
+            </button> -->
         </aside>
         <article>
             <img width="600px"src="../assets/img/john-travolta.png" alt="">
         </article>
+    </section>
+
+    <section id="eventos">
+        <div class="div-respiro">
+            <h1>Eventos</h1>
+        </div>
     </section>
 
     <!--
@@ -123,25 +126,26 @@
             </iframe> -->
             <img width="600px" src="../assets/img/rir.png" alt="">
         </article>
-        <aside class="texto-sobre">
-            <h1>Rock in Rio 1985</h1>
+        <aside class="texto">
+            <h2>Rock in Rio 1985</h2>
             <h4>
                 O Rock in Rio de 1985 foi a primeira edição do agora icônico festival de música realizado no Brasil. Aconteceu entre os dias 11 e 20 de janeiro de 1985, na Cidade do Rock, uma área especialmente construída em Jacarepaguá, no Rio de Janeiro. Este evento marcou a história da música no Brasil por sua escala e organização e pelo seu impacto cultural.
             </h4>
-            <button class="btn2 btn-pai">
+            <!-- <button class="btn2 btn-pai">
                 Saiba Mais
-            </button>
+            </button> -->
         </aside>
     </section>
+
     <section id="evento-ufa">
-        <aside class="texto-sobre">
-            <h1>USA for Africa - ONU</h1>
+        <aside class="texto">
+            <h2>USA for Africa - ONU</h2>
             <h4>
                 USA for Africa (United Support of Artists for Africa) foi uma iniciativa humanitária lançada em 1985 por 45 artistas liderados por Michael Jackson, Lionel Ritchie, Harry Belafonte e Kenny Rogers. O objetivo era combater a fome na África, especialmente na Etiópia, que enfrentava uma severa crise alimentar na época. O projeto é mais conhecido pela gravação da música "We Are the World". 
             </h4>
-            <button class="btn2 btn-pai">
+            <!-- <button class="btn2 btn-pai">
                 Saiba Mais
-            </button>
+            </button> -->
         </aside>
         <article>
             <!-- <iframe width="560" height="315" src="" 
@@ -158,6 +162,65 @@
         (BOTÕES IMAGEM DO ARTISTA / BANDA / ANO DE NASCIMENTO E ANO DE MORTE)
     -->
     <section id="player">
+        <div class="div-titulo">
+            <h1>Player</h1>
+        </div>
+        <div class="div-conteudo">
+            <div class="div-conteudo-1">
+                <div class="div-conteudo-2">
+                    <select id="sel-estilo">
+                        <option value="#">ROCK NACIONAL</option>
+                        <option value="#">ROCK INTERNACIONAL</option>
+                        <option value="#">MPB</option>
+                        <option value="#">POP INTERNACIONAL</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="div-conteudo-1">
+                <div class="div-conteudo-2">
+                    <select id="sel-estilo">
+                        <option value="#">ROCK NACIONAL</option>
+                        <option value="#">ROCK INTERNACIONAL</option>
+                        <option value="#">MPB</option>
+                        <option value="#">POP INTERNACIONAL</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="div-conteudo-1">
+                <div class="div-conteudo-2">
+                    <select id="sel-estilo">
+                        <option value="#">ROCK NACIONAL</option>
+                        <option value="#">ROCK INTERNACIONAL</option>
+                        <option value="#">MPB</option>
+                        <option value="#">POP INTERNACIONAL</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="div-conteudo-1">
+                <div class="div-conteudo-2">
+                    <select id="sel-estilo">
+                        <option value="#">ROCK NACIONAL</option>
+                        <option value="#">ROCK INTERNACIONAL</option>
+                        <option value="#">MPB</option>
+                        <option value="#">POP INTERNACIONAL</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="div-conteudo-1">
+                <div class="div-conteudo-2">
+                    <select id="sel-estilo">
+                        <option value="#">ROCK NACIONAL</option>
+                        <option value="#">ROCK INTERNACIONAL</option>
+                        <option value="#">MPB</option>
+                        <option value="#">POP INTERNACIONAL</option>
+                    </select>
+                </div>
+            </div>
+        </div>
         
     </section>
     <!--
@@ -173,7 +236,6 @@
         (LINKS DE NAV / AGRADECIMENTO / LOGO)
     -->
     <footer id="footer">
-
     </footer>
 </body>
 </html>
