@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* 
+    roxo1:  #A02FF2;
+    rosa1:  #f74b6f;
+    azul-marinho: #140535;
+    branco: #f4f4f4;
+*/
+
+/* TODOS OS ELEMENTOS */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* PÁGINA */ 
+html {
+    height: 100vh;
+    background: linear-gradient(to right, #a02ff2, #f74b6f);
+}
+
+body {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 40px;
+    
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 16px;
+    
+}
+
+.gif {
+    scale: .3;
+    position: absolute;
+    margin-top: -25vh;
+}
+
+.div-total {
+    background-color: #140535;
+    height: 95%;
+    width: 80vh;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 25px;
+
+    .div-titulo {
+        width: 100vh;
+        margin-top: 2vh;
+        display: flex;
+        align-items: center;
+        height: 5vh;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 5vh 100px;
+
+        a {
+            margin-right: 10vh;
+        }
+
+        h1 {
+            color: #f4f4f4;
+        }
+        .btn-2  {
+            width: 100%; 
+        }
+        .btn-pai {
+            padding: 5px;
+        }
+        .btn-pai:hover  {
+            width: 100%; 
+        }
+    }
+    .botao1 {
+        margin-top: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5vh;
+
+        h4 {
+            color: #f4f4f4;
+        }
+    }
+
+    .botao2 {
+        margin-top: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5vh;
+
+        h4 {
+            color: #f4f4f4;
+        }
+    }
+
+    .botao3 {
+        margin-top: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5vh;
+
+        h4 {
+            color: #f4f4f4;
+        }
+    }
+
+    .btn-pai {
+        padding: 20px; /* Espaçamento interno */
+        text-align: center; /* Alinhamento do texto */
+        text-decoration: none; /* Remove a decoração de texto */
+        display: inline-block; /* Exibe o botão como um elemento em linha */
+        font-size: 16px; /* Tamanho do texto */
+        margin: 4px 2px; /* Margem entre os botões */
+        cursor: pointer; /* Cursor do mouse */
+        border-radius: 10px; /* Borda arredondada */
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .btn-pai:hover {
+        border-radius: 30px; /* Borda arredondada */
+        transition: 0.5s;
+        font-size: 20px;
+    }
+
+    .btn-1  {
+        width: 100%;
+        border: 2px solid #f4f4f4; /* Borda */
+        background-color: #14053500;
+        color: #f4f4f4; /* Cor do texto */
+    }
+    
+    .btn-1:hover  {
+        background-color: #140535;
+        color: #a02ff2;
+    }
+    
+    .btn-2  {
+        width: 100%;
+        border: 2px solid #a02ff2; /* Borda */
+        background: linear-gradient(to right, #a02ff2, #f74b6f);
+        color: #f4f4f4; /* Cor do texto */
+    }
+    .btn-2:hover  {
+        border: 2px solid #f4f4f4;
+        background: #140535;
+        color: #a02ff2;
+    }
+
+    
+}

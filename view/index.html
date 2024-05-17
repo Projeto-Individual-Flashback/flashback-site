@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../style/index.css">
 
     <!-- JAVASCRIPT -->
-    <script src="..\script\index.js" defer></script>
+    <script src="../script/index.js" defer></script>
 
     <!-- FAVICON -->
     <link rel="icon" href="../assets/img/favicon.png" type="image/x-icon">
@@ -31,26 +31,31 @@
                 <nav class="navbar">
                     <ul class="nav-list">
                         <li><a href="#sobre"> Sobre </a></li>
-                        <li><a href="#player"> Player </a></li>
                         <li class="dropdown">
-                            <a href="#"> Eventos ▾</a>
+                            <a href="#evento-rir"> Eventos ▾</a>
                             <ul class="dropdown-content">
-                                <li><a href="#rockinrio">Rock in Rio 1985</a></li>
-                                <li><a href="#usaforafrica">USA for Africa</a></li>
+                                <li><a href="#evento-rir">Rock in Rio 1985</a></li>
+                                <li><a href="#evento-ufa">USA for Africa</a></li>
                             </ul>
                         </li>
+                        <li><a href="#player"> Player </a></li>
                         <li><a href="#"> Boates </a></li>
-                        <li><a href="#"> Quiz </a></li>
+                        <li><a href="../view/quiz.html"> Quiz </a></li>
                     </ul>
                 </nav>
                 <div class="div-btns">
-                    <button class="btn-1 btn-pai">Login</button>
-                    <button class="btn-2 btn-pai">Cadastre-se</button>
+                    <a href="../view/login.html" class="btn-login">
+                        <button class="btn1 btn-pai">Login</button>
+                    </a>
+                    <a href="../view/cadastro.html" class="btn-cadastro">
+                        <button class="btn2 btn-pai">Cadastre-se</button>
+                    </a>
+                    
                 </div> 
             </div>
         </div>
         <!-- GLOBO -->
-        <img class="gif" src="../assets/img/globo-gif.gif" alt="">
+        <img class="gif" src="../assets/img/globo-gif.gif" alt="gif-globo">
 
         
     </header>
@@ -64,7 +69,7 @@
             <img src="../assets/img/banner-star.png" alt="Slide 1">
         </div>
         <div class="slides">
-            <img src="../assets/img/banner-star-2.png" alt="Slide 2">
+            <img src="../assets/img/rockinrio.png" alt="Slide 2">
         </div>
         <div class="slides">
             <img src="../assets/img/usaforafrica.png" alt="Slide 3">
@@ -97,23 +102,13 @@
             <h4>
                 A música tem o poder de nos contagiar, ouvimos uma canção e passamos a sentir o que o artista poderia estar sentindo no momento. Esses momentos podem ser de alegria, de emoção, de paixão e até de tristeza. Escutar uma nova música, conhecer artistas diferentes e se atualizar sobre novos talentos é legal, mas nada se compara a escutar velhas canções, músicas que te levam a momentos de nostalgia inesquecíveis. E as músicas antigas tem esse poder em minha vida, elas me levam a um mundo onde tudo parece mais leve e feliz. Por isso, fiz esse projeto, não com o intuito de menosprezar as músicas atuais, porém com o propósito de valorizar músicas que ainda tocam no coração de muitas pessoas.
             </h4>
-            <button class="btn-2 btn-pai">
+            <button class="btn2 btn-pai">
                 Saiba Mais
             </button>
         </aside>
         <article>
             <img width="600px"src="../assets/img/john-travolta.png" alt="">
         </article>
-    </section>
-
-    <!-- 
-        PLAYER -
-        (IMAGEM DA MUSICA / TITULO DA MUSICA / ÁLBUM / ANO) 
-        (BOTÕES 'VOLTAR MÚSICA', 'PLAY / PAUSE' E 'PRÓXIMA MÚSICA')
-        (BOTÕES IMAGEM DO ARTISTA / BANDA / ANO DE NASCIMENTO E ANO DE MORTE)
-    -->
-    <section id="player">
-
     </section>
 
     <!--
@@ -122,26 +117,48 @@
     -->
     <section id="evento-rir">
         <article>
-            <img width="600px"src="../assets/img/john-travolta.png" alt="">
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ZgnoiP6JHBw" 
+                frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe> -->
+            <img width="600px" src="../assets/img/rir.png" alt="">
         </article>
         <aside class="texto-sobre">
-            <h1>Rock in Rio 85</h1>
+            <h1>Rock in Rio 1985</h1>
             <h4>
-                A música tem o poder de nos contagiar, ouvimos uma canção e passamos a sentir o que o artista poderia estar sentindo no momento. Esses momentos podem ser de alegria, de emoção, de paixão e até de tristeza. Escutar uma nova música, conhecer artistas diferentes e se atualizar sobre novos talentos é legal, mas nada se compara a escutar velhas canções, músicas que te levam a momentos de nostalgia inesquecíveis. E as músicas antigas tem esse poder em minha vida, elas me levam a um mundo onde tudo parece mais leve e feliz. Por isso, fiz esse projeto, não com o intuito de menosprezar as músicas atuais, porém com o propósito de valorizar músicas que ainda tocam no coração de muitas pessoas.
+                O Rock in Rio de 1985 foi a primeira edição do agora icônico festival de música realizado no Brasil. Aconteceu entre os dias 11 e 20 de janeiro de 1985, na Cidade do Rock, uma área especialmente construída em Jacarepaguá, no Rio de Janeiro. Este evento marcou a história da música no Brasil por sua escala e organização e pelo seu impacto cultural.
             </h4>
-            <button class="btn-2 btn-pai">
+            <button class="btn2 btn-pai">
                 Saiba Mais
             </button>
         </aside>
-        
     </section>
-
-    <!--
-        EVENTO - USA FOR AFRICA (WE ARE THE WORLD) -
-        (BANNER / TITULO / BOTÃO 'SAIBA MAIS')
-    -->
     <section id="evento-ufa">
-
+        <aside class="texto-sobre">
+            <h1>USA for Africa - ONU</h1>
+            <h4>
+                USA for Africa (United Support of Artists for Africa) foi uma iniciativa humanitária lançada em 1985 por 45 artistas liderados por Michael Jackson, Lionel Ritchie, Harry Belafonte e Kenny Rogers. O objetivo era combater a fome na África, especialmente na Etiópia, que enfrentava uma severa crise alimentar na época. O projeto é mais conhecido pela gravação da música "We Are the World". 
+            </h4>
+            <button class="btn2 btn-pai">
+                Saiba Mais
+            </button>
+        </aside>
+        <article>
+            <!-- <iframe width="560" height="315" src="" 
+                frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe> -->
+            <img width="600px" src="../assets/img/ufa.png" alt="">
+        </article>
+    </section>
+    <!-- 
+        PLAYER -
+        (IMAGEM DA MUSICA / TITULO DA MUSICA / ÁLBUM / ANO) 
+        (BOTÕES 'VOLTAR MÚSICA', 'PLAY / PAUSE' E 'PRÓXIMA MÚSICA')
+        (BOTÕES IMAGEM DO ARTISTA / BANDA / ANO DE NASCIMENTO E ANO DE MORTE)
+    -->
+    <section id="player">
+        
     </section>
     <!--
         QUIZ -
@@ -155,7 +172,7 @@
         FOOTER -
         (LINKS DE NAV / AGRADECIMENTO / LOGO)
     -->
-    <footer>
+    <footer id="footer">
 
     </footer>
 </body>

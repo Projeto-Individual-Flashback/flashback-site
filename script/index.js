@@ -6,7 +6,7 @@ window.addEventListener("scroll", function() {
 /* Rolagem do HEADER - FIM */
 
 /* SLIDE - INICIO */
-let slideIndex = 1;
+var slideIndex = 1;
     showSlides(slideIndex);
 
     function plusSlides(n) {
