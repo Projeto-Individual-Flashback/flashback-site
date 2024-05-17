@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../style/index.css">
 
     <!-- JAVASCRIPT -->
-    <script src="..\script\index.js"></script>
+    <script src="..\script\index.js" defer></script>
 
     <!-- FAVICON -->
     <link rel="icon" href="../assets/img/favicon.png" type="image/x-icon">
@@ -51,25 +51,42 @@
         </div>
         <!-- GLOBO -->
         <img class="gif" src="../assets/img/globo-gif.gif" alt="">
+
+        
     </header>
+
     <!-- 
         BANNER - (BANNER ROTATIVO / TITULO / BOTÃO 'SUCESSOS DA ÉPOCA') 
     -->
-    <section id="banner">
-        <div class="total">
-            <!-- BANNER ANTERIOR -->
-            <button class="btn-banner1 btn-pai"><</button>
 
-            <div class="banner-container">
-                <h2 class="titulo-banner">Embarque nessa viagem <br> <h1>Aos melhores anos da música</h1></h2>
-            <a href="">
-                <button class="btn-2 btn-pai">Saiba Mais</button>
-            </a>
-            </div>
-            <!-- BANNER PRÓXIMO -->
-            <button class="btn-banner1 btn-pai">></button>
+    <div class="slideshow-container">
+        <div class="slides">
+            <img src="../assets/img/banner-star.png" alt="Slide 1">
         </div>
-    </section>
+        <div class="slides">
+            <img src="../assets/img/banner-star-2.png" alt="Slide 2">
+        </div>
+        <div class="slides">
+            <img src="../assets/img/usaforafrica.png" alt="Slide 3">
+        </div>
+    
+        <a class="prev">
+            <button class="btn-pai">
+                &#10094;
+            </button>
+        </a>
+        <a class="next">
+            <button class="btn-pai">
+                &#10095;
+            </button>
+        </a>
+    </div>
+    
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
 
     <!-- 
         SOBRE - (IMAGEM / TEXTO EXPLICATIVO / BOTÃO 'SAIBA MAIS') 
@@ -78,7 +95,7 @@
         <aside class="texto-sobre">
             <h1>Sobre o Projeto</h1>
             <h4>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque praesentium pariatur dolores quas totam delectus, nesciunt labore quis doloremque maxime perspiciatis distinctio similique quidem, aperiam asperiores, quasi tenetur libero nam voluptatum illum. Eaque quia reprehenderit cumque sit nisi architecto beatae doloremque accusamus vitae sed veritatis dolorum eveniet repellendus, at fuga?
+                A música tem o poder de nos contagiar, ouvimos uma canção e passamos a sentir o que o artista poderia estar sentindo no momento. Esses momentos podem ser de alegria, de emoção, de paixão e até de tristeza. Escutar uma nova música, conhecer artistas diferentes e se atualizar sobre novos talentos é legal, mas nada se compara a escutar velhas canções, músicas que te levam a momentos de nostalgia inesquecíveis. E as músicas antigas tem esse poder em minha vida, elas me levam a um mundo onde tudo parece mais leve e feliz. Por isso, fiz esse projeto, não com o intuito de menosprezar as músicas atuais, porém com o propósito de valorizar músicas que ainda tocam no coração de muitas pessoas.
             </h4>
             <button class="btn-2 btn-pai">
                 Saiba Mais
@@ -100,19 +117,23 @@
     </section>
 
     <!--
-        ESTRELAS -
-        (BOTÕES 'VOLTAR ARTISTA' E 'PRÓXIMA ARTISTA' / IMAGEM DO ARTISTA /  ) 
-    -->
-    <section id="estrelas">
-    
-    </section>
-
-    <!--
         EVENTO - ROCK IN RIO (1985) -
         (BANNER / TITULO / BOTÃO 'SAIBA MAIS')
     -->
     <section id="evento-rir">
-
+        <article>
+            <img width="600px"src="../assets/img/john-travolta.png" alt="">
+        </article>
+        <aside class="texto-sobre">
+            <h1>Rock in Rio 85</h1>
+            <h4>
+                A música tem o poder de nos contagiar, ouvimos uma canção e passamos a sentir o que o artista poderia estar sentindo no momento. Esses momentos podem ser de alegria, de emoção, de paixão e até de tristeza. Escutar uma nova música, conhecer artistas diferentes e se atualizar sobre novos talentos é legal, mas nada se compara a escutar velhas canções, músicas que te levam a momentos de nostalgia inesquecíveis. E as músicas antigas tem esse poder em minha vida, elas me levam a um mundo onde tudo parece mais leve e feliz. Por isso, fiz esse projeto, não com o intuito de menosprezar as músicas atuais, porém com o propósito de valorizar músicas que ainda tocam no coração de muitas pessoas.
+            </h4>
+            <button class="btn-2 btn-pai">
+                Saiba Mais
+            </button>
+        </aside>
+        
     </section>
 
     <!--
