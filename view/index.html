@@ -10,6 +10,9 @@
     <!-- JAVASCRIPT -->
     <script src="../script/index.js" defer></script>
 
+    <!-- ICONES -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
     <!-- FAVICON -->
     <link rel="icon" href="../assets/img/favicon.png" type="image/x-icon">
 
@@ -39,7 +42,6 @@
                             </ul>
                         </li>
                         <li><a href="#player"> Player </a></li>
-                        <li><a href="#"> Boates </a></li>
                         <li><a href="../view/quiz-options.html"> Quiz </a></li>
                     </ul>
                 </nav>
@@ -96,9 +98,12 @@
     <section id="sobre">
         <aside class="texto">
             <h1>Sobre o Projeto</h1>
-            <h4>
-                A música tem o poder de nos contagiar, ouvimos uma canção e passamos a sentir o que o artista poderia estar sentindo no momento. Esses momentos podem ser de alegria, de emoção, de paixão e até de tristeza. Escutar uma nova música, conhecer artistas diferentes e se atualizar sobre novos talentos é legal, mas nada se compara a escutar velhas canções, músicas que te levam a momentos de nostalgia inesquecíveis. E as músicas antigas tem esse poder em minha vida, elas me levam a um mundo onde tudo parece mais leve e feliz. Por isso, fiz esse projeto, não com o intuito de menosprezar as músicas atuais, porém com o propósito de valorizar músicas que ainda tocam no coração de muitas pessoas.
-            </h4>
+            <p>
+                A música tem o poder de nos contagiar, ouvimos uma canção e passamos a sentir o que o artista poderia estar sentindo no momento. Esses momentos podem ser de alegria, de emoção, de paixão e até de tristeza. Escutar uma nova música, conhecer artistas diferentes e se atualizar sobre novos talentos é legal, mas nada se compara a escutar velhas canções, músicas que te levam a momentos de nostalgia inesquecíveis. 
+                <br> <br>
+                E as músicas antigas tem esse poder em nossas vidas, elas nos levam a um mundo onde tudo parecia mais leve e feliz. Por isso fiz esse projeto, com o propósito de valorizar músicas que já não são tão valorizadas pela grande mídia inesquecíveis e que ainda tocam no coração de muitas pessoas.
+                Aqui você vai ficar por dentro de tudo sobre essa época, cantores que se destacaram, músicas marcantes, curiosidades e muito mais.
+            </p>
             <!-- <button class="btn2 btn-pai">
                 Saiba Mais
             </button> -->
@@ -115,8 +120,7 @@
     </section>
 
     <!--
-        EVENTO - ROCK IN RIO (1985) -
-        (BANNER / TITULO / BOTÃO 'SAIBA MAIS')
+        EVENTO - ROCK IN RIO (1985)
     -->
     <section id="evento-rir">
         <article>
@@ -128,21 +132,72 @@
         </article>
         <aside class="texto">
             <h2>Rock in Rio 1985</h2>
-            <h4>
+            <p>
                 O Rock in Rio de 1985 foi a primeira edição do agora icônico festival de música realizado no Brasil. Aconteceu entre os dias 11 e 20 de janeiro de 1985, na Cidade do Rock, uma área especialmente construída em Jacarepaguá, no Rio de Janeiro. Este evento marcou a história da música no Brasil por sua escala e organização e pelo seu impacto cultural.
-            </h4>
+            </p>
+            <div class="div-imgs">
+                <i class="ph ph-cursor">
+                    <p>Artistas</p>
+                </i>
+                <div class="imgs">
+                    <div class="img-artista">
+                        <img src="../assets/img/freddie-mercury.png" alt="">
+                        <h5>Freddie M.<br> (Queen)</h5>
+                    </div>
+                    <div class="img-artista">
+                        <img src="../assets/img/cazuza.png" alt="">
+                        <h5>Cazuza <br> (Barão V.)</h5>
+                    </div>
+                    <div class="img-artista">
+                        <img src="../assets/img/george-benson.png" alt="">
+                        <h5>George <br>Benson</h5>
+                    </div>
+                    <div class="img-artista">
+                        <img src="../assets/img/lulu-santos.png" alt="">
+                        <h5>Lulu <br>Santos</h5>
+                    </div>
+                </div>
+            </div>
             <!-- <button class="btn2 btn-pai">
                 Saiba Mais
             </button> -->
         </aside>
     </section>
 
+    <!--
+        EVENTO - USA FOR AFRICA
+    -->
     <section id="evento-ufa">
         <aside class="texto">
             <h2>USA for Africa - ONU</h2>
-            <h4>
+            <p>
                 USA for Africa (United Support of Artists for Africa) foi uma iniciativa humanitária lançada em 1985 por 45 artistas liderados por Michael Jackson, Lionel Ritchie, Harry Belafonte e Kenny Rogers. O objetivo era combater a fome na África, especialmente na Etiópia, que enfrentava uma severa crise alimentar na época. O projeto é mais conhecido pela gravação da música "We Are the World". 
-            </h4>
+            </p>
+
+            <div class="div-imgs">
+                <i class="ph ph-cursor">
+                    <p>Artistas</p>
+                </i>
+                <div class="imgs">
+                    <div class="img-artista">
+                        <img src="../assets/img/michael-jackson.png" alt="">
+                        <h5>Michael <br>Jackson</h5>
+                    </div>
+                    <div class="img-artista">
+                        <img src="../assets/img/lionel-ritchie.png" alt="">
+                        <h5>Lionel <br> Ritchie</h5>
+                    </div>
+                    <div class="img-artista">
+                        <img src="../assets/img/cindi-lauper.png" alt="">
+                        <h5>Cindi <br>Lauper</h5>
+                    </div>
+                    <div class="img-artista">
+                        <img src="../assets/img/stevie-wonder.png" alt="">
+                        <h5>Stevie <br>Wonder</h5>
+                    </div>
+                </div>
+                
+            </div>
             <!-- <button class="btn2 btn-pai">
                 Saiba Mais
             </button> -->
@@ -168,6 +223,58 @@
         <div class="div-conteudo">
             <div class="div-conteudo-1">
                 <div class="div-conteudo-2">
+                    <h3 class="titulo-musica">Estilo Musical</h3>
+                    <select id="sel-estilo">
+                        <option value="#">Rock Nacional</option>
+                        <option value="#">Rock Internacional</option>
+                        <option value="#">MPB</option>
+                        <option value="#">Pop Internacional</option>
+                    </select>
+                </div>
+            </div>
+            <div class="div-conteudo-1">
+                <div class="div-conteudo-3">
+                    <div class="info">
+                        <img width="100px" src="../assets/img/george-michael.png" alt="">
+                        <audio></audio>
+                        <h3 class="titulo-musica">Careless Whisper</h3>
+                        <p class="artista">George Michael</p>
+                    </div>
+                    <div class="prop">
+                        <div class="volume">
+                            <i class="ph ph-speaker-none"></i>
+                            <input type="range" ="volume-slider">
+                            <i class="ph ph-speaker-high"></i>
+                        </div>
+
+                        <div class="player-btns">
+                            <button class="btn-pai btn1 btn-prop">
+                                <i class="ph ph-skip-back"></i>
+                            </button>
+                            <button class="btn-pai btn2 btn-prop">
+                                <i class="ph ph-play" id="btn-play"></i> 
+                            </button>
+                            <button class="btn-pai btn1 btn-prop">
+                                <i class="ph ph-skip-forward"></i>
+                            </button>
+                        </div>
+
+                        <div>
+                            <div class="progressBar">
+                                <div class="progress"></div>
+                            </div>
+                            <div class="musicTimer">
+                                <span class="currentTime">00:00</span>
+                                <span class="duration">00:00</span>
+                            </div>
+                        </div>
+                    </div>       
+                </div>
+            </div>
+
+            <div class="div-conteudo-1">
+                <div class="div-conteudo-2">
+                    <h3 class="titulo-musica">Música</h3>
                     <select id="sel-estilo">
                         <option value="#">ROCK NACIONAL</option>
                         <option value="#">ROCK INTERNACIONAL</option>
@@ -178,40 +285,19 @@
             </div>
 
             <div class="div-conteudo-1">
-                <div class="div-conteudo-2">
-                    <select id="sel-estilo">
-                        <option value="#">ROCK NACIONAL</option>
-                        <option value="#">ROCK INTERNACIONAL</option>
-                        <option value="#">MPB</option>
-                        <option value="#">POP INTERNACIONAL</option>
-                    </select>
+                <div class="div-conteudo-3">
+                    <div class="info info2">
+                        <img width="100px" src="../assets/img/george-michael.png" alt="">
+                        <audio></audio>
+                        <h3 class="titulo-musica">Careless Whisper</h3>
+                        <p class="artista">George Michael</p>
+                    </div>
                 </div>
             </div>
 
             <div class="div-conteudo-1">
                 <div class="div-conteudo-2">
-                    <select id="sel-estilo">
-                        <option value="#">ROCK NACIONAL</option>
-                        <option value="#">ROCK INTERNACIONAL</option>
-                        <option value="#">MPB</option>
-                        <option value="#">POP INTERNACIONAL</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="div-conteudo-1">
-                <div class="div-conteudo-2">
-                    <select id="sel-estilo">
-                        <option value="#">ROCK NACIONAL</option>
-                        <option value="#">ROCK INTERNACIONAL</option>
-                        <option value="#">MPB</option>
-                        <option value="#">POP INTERNACIONAL</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="div-conteudo-1">
-                <div class="div-conteudo-2">
+                    <h3 class="titulo-musica">Época</h3>
                     <select id="sel-estilo">
                         <option value="#">ROCK NACIONAL</option>
                         <option value="#">ROCK INTERNACIONAL</option>

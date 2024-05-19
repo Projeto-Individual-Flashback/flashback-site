@@ -5,33 +5,40 @@ window.addEventListener("scroll", function() {
 })
 /* Rolagem do HEADER - FIM */
 
-/* SLIDE - INICIO */
+/* SLIDEBANNER - INICIO */
 var slideIndex = 1;
-    showSlides(slideIndex);
 
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("slides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
     }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
 
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("slides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-    }
+document.querySelector(".prev").addEventListener("click", () => plusSlides(-1));
+document.querySelector(".next").addEventListener("click", () => plusSlides(1));
+/* SLIDEBANNER - FIM */
 
-    document.querySelector(".prev").addEventListener("click", () => plusSlides(-1));
-    document.querySelector(".next").addEventListener("click", () => plusSlides(1));
+/* FUNCAO - INICIO */
+window.addEventListener("scroll", function() {
+    var header = document.querySelector('#header')
+    header.classList.toggle('rolagem', window.scrollY > 0);
+})
+/* FUNCAO - FIM */

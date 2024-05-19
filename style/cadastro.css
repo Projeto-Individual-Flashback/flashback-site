@@ -17,6 +17,7 @@
 html {
     height: 100vh;
     background-image: url(../assets/img/banner-star.png);
+    background-repeat: no-repeat;
 }
 
 body {
@@ -27,8 +28,7 @@ body {
 }
 
 h1 {
-    font-size: 40px;
-    
+    font-size: 40px;   
 }
 
 h2 {
@@ -43,19 +43,19 @@ h4 {
     font-size: 18px;
 }
 
+
 .gif {
-    scale: .3;
+    width: 200px;
     position: absolute;
-    margin-top: -40vh;
+    margin-top: -80px;
     transition: 1s;
 }
 
 .gif:hover {
-    scale: .4;
+    width: 300px;
     transition: 1s;
-    margin-top: -35vh;
+    margin-top: -80px;
 }
-
 .div-total {
     background-color: #140535;
     width: 100vh;
@@ -63,7 +63,7 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 25px;
+    border-radius: 2.5vh;
     color: #f4f4f4;
 
     .div-titulo {
@@ -153,7 +153,7 @@ h4 {
     }
     input {
         padding: 1vh; /* Espaçamento interno */
-        text-align: center; /* Alinhamento do texto */
+        text-align: start; /* Alinhamento do texto */
         text-decoration: none; /* Remove a decoração de texto */
         display: inline-block; /* Exibe o botão como um elemento em linha */
         font-size: 20px; /* Tamanho do texto */
@@ -165,7 +165,7 @@ h4 {
         align-self: center;
         cursor: text;
         border: 2px solid #f4f4f4; /* Borda */
-        background-color: #14053500;
+        background-color: #0d0323;
         color: #f4f4f4; /* Cor do texto */
         outline: none;
     }
@@ -173,7 +173,6 @@ h4 {
     input:hover {
         display: flex;
         justify-self: center;
-        text-align: center;
         border-radius: 30px;
         padding: 2vh;
     }
