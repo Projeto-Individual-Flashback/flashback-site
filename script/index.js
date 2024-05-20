@@ -37,8 +37,10 @@ document.querySelector(".next").addEventListener("click", () => plusSlides(1));
 /* SLIDEBANNER - FIM */
 
 /* FUNCAO - INICIO */
-window.addEventListener("scroll", function() {
-    var header = document.querySelector('#header')
-    header.classList.toggle('rolagem', window.scrollY > 0);
-})
+// window.addEventListener("scroll", function() {
+//     var header = document.querySelector('#header')
+//     header.classList.toggle('rolagem', window.scrollY > 0);
+// })
 /* FUNCAO - FIM */
+
+

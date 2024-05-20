@@ -528,9 +528,22 @@ header.rolagem {
 
         .div-conteudo-1 {
             display: flex;
-            justify-content: space-around;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            height: 40vh;
+            height: 50vh;
+
+            .titulo-musica {
+                color: #f4f4f4;
+            }
+            .title {
+                margin-bottom: 2vh;
+            }
+        }
+        .music-options {
+            height: 50%;
+            display: flex;
+            flex-direction: column;
         }
         
         .div-conteudo-2 {
@@ -538,7 +551,7 @@ header.rolagem {
             flex-direction: column;
             justify-content: space-around;
             align-items: center;
-            background-color: #73f86a;
+            color: #f4f4f4;
             height: 10vh;
         }
 
@@ -553,9 +566,10 @@ header.rolagem {
             border-radius: 25px;
 
             .info {
-                background-color: #8917cb;
+                height: 18vh;
                 display: flex;
                 flex-direction: column;
+                justify-content: space-around;
                 align-items: center;
 
                 img {
@@ -568,6 +582,11 @@ header.rolagem {
 
             .info2 {
                 width: 50vh;
+            }
+
+            .btn-art {
+                width: 10vh;
+                margin: 0 2vw;
             }
 
             .prop {
@@ -593,23 +612,53 @@ header.rolagem {
                     align-items: center;
 
                     .btn-prop {
-                        width:8vh;
+                        width: 8vh;
                         height:8vh;
                         display: flex;
                         justify-content: center;
                         align-items: center;
                     }
                 }
-
+                
                 i {
-                    font-size: 3vh;
+                    font-size: 30px;
                 }
                 .ph-skip-back, .ph-play, .ph-skip-forward {
-                    font-size: 3vh;
+                    font-size: 30px;
                     display: flex;
                 }
+
+                .progresso {
+                    width: 12vw;
+                    margin-top: 2vh;
+
+                    .progressBar {
+                        height: 8px;
+                        background-color: #2d106e;
+                        border-radius: 4px;
+                    }
+                
+                    .progress {
+                        height: 8px;
+                        background-color: #8917cb;
+                        border-radius: 4px;
+                    }
+                }
+
+                
+
             }
         }
+    .musicTimer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 8px;
+
+        span {
+            font-size: 14px;
+            font-weight: 100;
+        }
+    }
 
     h1 {
         background-color: #140535;
@@ -642,18 +691,20 @@ header.rolagem {
 }
 
 #sel-estilo {
+    border-radius: 10px;
     color: #f4f4f4;
     z-index: 1;
-    width: 100%;
     padding: 10px 0; 
     background: linear-gradient(to right, #a02ff2, #f74b6f);
     display: flex;
     flex-direction: column;
     transition: 2s;
+    width: 8vw;
+    cursor: pointer;
 
     option {
         color: #140535;
-        background: linear-gradient(to right, #a02ff2, #f74b6f);
+        cursor: pointer;
     }
 }
 
