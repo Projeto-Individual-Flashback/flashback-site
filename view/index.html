@@ -222,100 +222,28 @@
         (BOTÕES 'VOLTAR MÚSICA', 'PLAY / PAUSE' E 'PRÓXIMA MÚSICA')
         (BOTÕES IMAGEM DO ARTISTA / BANDA / ANO DE NASCIMENTO E ANO DE MORTE)
     -->
-    <section id="player">
-        <div class="div-titulo">
+
+    <section id="player-title">
+        <div class="div-respiro">
             <h1>Player</h1>
         </div>
-        <div class="div-conteudo">
-            <div id="artista_player" class="div-conteudo-1">
-                <h3 class="titulo-musica title">Artista</h3>
-                <div class="div-conteudo-3">
-                    <button class="btn-pai btn2 btn-prop btn-art">
-                        <i class="ph ph-skip-back"></i>
-                    </button>
-                    <div class="info info2">
-                        <img width="100px" src="../assets/img/george-michael.png" alt="">
-                        <h3 class="titulo-musica">George Michael</h3>
-                        <p class="artista">Wham!</p>
-                    </div>
-                    <button class="btn-pai btn2 btn-prop btn-art">
-                        <i class="ph ph-skip-forward"></i>
-                    </button>
-                    
-                </div>
-            </div>
-            <div id="musica_player" class="div-conteudo-1">
-                <h3 class="titulo-musica title">Música</h3>
-                <div class="div-conteudo-3">
-                    <div class="info">
-                        <img width="100px" src="../assets/img/imagem-musica.png" alt="">
-                        <audio id="player_musica" src="../assets/audio/George Michael - Careless Whisper (Official Video).mp3"></audio>
-                        <h3 id="musica_nome" class="titulo-musica">Careless Whisper</h3>
-                        <p id="artista_nome" class="artista">Make It Big</p>
-                    </div>
-                    <div class="prop">
-                        <div class="volume">
-                            <i class="ph ph-speaker-none"></i>
-                            <input type="range" id="volume_slider">
-                            <i class="ph ph-speaker-high"></i>
-                        </div>
-                        <div class="player-btns">
-                            <button class="btn-pai btn1 btn-prop" id="prev">
-                                <i class="ph ph-skip-back"></i>
-                            </button>
-                            <button class="btn-pai btn2 btn-prop" id="play">
-                                <i class="ph ph-play"></i> 
-                            </button>
-                            <button class="btn-pai btn1 btn-prop"  id="next">
-                                <i class="ph ph-skip-forward"></i>
-                            </button>
-                        </div>
+    </section>
 
-                        <div class="progresso">
-                            <div class="progressBar">
-                                <div class="progress"></div>
-                            </div>
-                            <div class="musicTimer">
-                                <span class="currentTime">00:00</span>
-                                <span class="duration">00:00</span>
-                            </div>
-                        </div>
-                    </div>       
-                </div>
+    <section id="player">
+        <div class="card">
+            <div class="top">
+              <div class="pfp">
+                  <img src="../assets/img/george-michael.png" alt="">
+              </div>
+              <div class="texts">
+                <p class="title-1">Careless Whisper</p>
+                <p class="title-2">George Michael</p>
+              </div>
             </div>
-            <div class="music-options">
-                <div id="tipo_player" class="div-conteudo-1">
-                    <div class="div-conteudo-2">
-                        <h3 class="titulo-musica">Tipo</h3>
-                        <select id="sel-estilo">
-                            <option value="#">Nacional</option>
-                            <option value="#">Internacional</option>
-                        </select>
-                    </div>
-                </div>
-                <div id="estilo_player" class="div-conteudo-1">
-                    <div class="div-conteudo-2">
-                        <h3 class="titulo-musica">Estilo</h3>
-                        <select id="sel-estilo">
-                            <option value="#">Rock</option>
-                            <option value="#">Pop</option>
-                            <option value="#">Soul</option>
-                        </select>
-                    </div>
-                </div>
-                <div id="epoca_player" class="div-conteudo-1">
-                    <div class="div-conteudo-2">
-                        <h3 class="titulo-musica">Época</h3>
-                        <select id="sel-estilo">
-                            <option value="#">Década de 70</option>
-                            <option value="#">Década de 80</option>
-                        </select>
-                    </div>
-                </div>
+            <div class="controls">
+                <i id="play_music" class="ph-thin ph-play"></i>
             </div>
-            
-        </div>
-        
+          </div>        
     </section>
     <!--
         QUIZ -

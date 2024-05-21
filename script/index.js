@@ -43,4 +43,25 @@ document.querySelector(".next").addEventListener("click", () => plusSlides(1));
 // })
 /* FUNCAO - FIM */
 
+var audio = new Audio('../assets/src/george-michael-careless-whisper.mp3');
+
+var ligado = false;
+
+const play_music = document.getElementById("play_music");
+
+play_music.addEventListener('click', tocar_musica);
+
+function tocar_musica() {
+    if (ligado == false) {
+        audio.play();
+        ligado = true;
+        play_music.classList.add('ph-pause');
+        play_music.classList.remove('ph-play');
+    } else {
+        audio.pause();
+        ligado = false;
+        play_music.classList.remove('ph-pause');
+        play_music.classList.add('ph-play');
+    }
+}
 
