@@ -510,79 +510,86 @@ header.rolagem {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f74b6f;
+    background-color:#140535;
     height: 12vh;
     color: #f4f4f4;
 }
 
 #player {
-    background-color: #a02ff2;
+    background-color: #f74b6f;
     height: 80vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    .card {
-        position: relative;
-        width: 400px;
-        height: 130px;
-        background: #140535;
-        border-radius: 20px;
-        padding: 10px;
-      }
-      
-      .top {
-        position: relative;
-        width: 100%;
-        display: flex;
-        gap: 10px;
-      }
-      
-      .pfp {
-        position: relative;
-        top: 5px;
-        left: 5px;
-        height: 100px;
-        width: 100px;
-        border-radius: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
 
-        img {
-            height: 100%;
-            width: 100%;
-            border-radius: 15px;
-        }
-      }
-      
-      .title-1 {
-        color: white;
-        font-size: 25px;
-        font-weight: bolder;
-        margin-left: 5px;
-      }
-      
-      .title-2 {
-        color: lightgrey;
-        font-size: 12px;
-        font-weight: bold;
-        margin-top: -7px;
-        margin-left: 5px;
-      }
-      
-      .controls {
-        color: white;
+    .div-player-1, .div-player-2 {
         display: flex;
-        position: absolute;
-        bottom: 30px;
-        width: 100%;
-        margin-left: 25px;
         justify-content: center;
-        i {
-            scale: 3;
-            margin: 10px 30px;
-        }
-      }
+        .card {
+            position: relative;
+            width: 500px;
+            height: 130px;
+            background: #140535;
+            border-radius: 20px;
+            padding: 10px;
+          }
+          
+          .top {
+            position: relative;
+            width: 100%;
+            display: flex;
+            gap: 10px;
+          }
+          
+          .pfp {
+            position: relative;
+            top: 5px;
+            left: 5px;
+            height: 100px;
+            width: 100px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            img {
+                height: 100%;
+                width: 100%;
+                border-radius: 15px;
+            }
+          }
+          
+          .title-1 {
+            color: white;
+            font-size: 25px;
+            font-weight: bolder;
+            margin-left: 5px;
+          }
+          
+          .title-2 {
+            color: lightgrey;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: -7px;
+            margin-left: 5px;
+          }
+          
+          .controls {
+            color: white;
+            display: flex;
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            margin-left: 25px;
+            justify-content: center;
+            i {
+                scale: 3;
+                margin: 10px 30px;
+            }
+          }
+    }
+    
       
      
 }
