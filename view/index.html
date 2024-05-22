@@ -47,7 +47,8 @@
                                 <li><a href="#evento-ufa">USA for Africa</a></li>
                             </ul>
                         </li>
-                        <li><a href="#player"> Trilhas </a></li>
+                        <li><a href="#trilhas"> Trilhas </a></li>
+                        <li><a href="#playlist"> Minha Playlist </a></li>
                         <li><a href="../view/quiz-options.html"> Quiz </a></li>
                     </ul>
                 </nav>
@@ -154,6 +155,21 @@
                         <img src="../assets/img/cazuza.png" alt="">
                         <h5>Cazuza <br> (Barão V.)</h5>
                     </div>
+                    <div class="card">
+                        <div class="top">
+                          <div class="pfp">
+                              <img width="50px" src="../assets/img/rock-roupa.png" alt="">
+                          </div>
+                          <div class="controls">
+                            <i id="rock-roupa.mp3" class="ph-thin ph-play" onclick="tocar_musica(id)" ></i>
+                            <i id="rock-roupa" class="ph-thin ph-plus" onclick="add_playlist(id)"></i>
+                        </div>
+                          <div class="texts">
+                            <h5 class="title-1">Rock In Rio</h5>
+                            <h6 class="title-2">Roupa Nova</h6>
+                          </div>
+                        </div>
+                    </div> 
                     <div class="img-artista">
                         <img src="../assets/img/george-benson.png" alt="">
                         <h5>George <br>Benson</h5>
@@ -179,7 +195,7 @@
             <p>
                 USA for Africa (United Support of Artists for Africa) foi uma iniciativa humanitária lançada em 1985 por 45 artistas liderados por Michael Jackson, Lionel Ritchie, Harry Belafonte e Kenny Rogers. O objetivo era combater a fome na África, especialmente na Etiópia, que enfrentava uma severa crise alimentar na época. O projeto é mais conhecido pela gravação da música "We Are the World". 
             </p>
-
+            
             <div class="div-imgs">
                 <i class="ph ph-cursor">
                     <p>Artistas</p>
@@ -193,14 +209,30 @@
                         <img src="../assets/img/lionel-ritchie.png" alt="">
                         <h5>Lionel <br> Ritchie</h5>
                     </div>
+                    <div class="card">
+                        <div class="top">
+                          <div class="pfp">
+                              <img width="50px" src="../assets/img/usa-for.png" alt="">
+                          </div>
+                          <div class="controls">
+                            <i id="usa-for.mp3" class="ph-thin ph-play" onclick="tocar_musica(id)" ></i>
+                            <i id="usa-for" class="ph-thin ph-plus" onclick="add_playlist(id)"></i>
+                        </div>
+                          <div class="texts">
+                            <h5 class="title-1">We Are The World</h5>
+                            <h6 class="title-2">Usa For Africa</h6>
+                          </div>
+                        </div>
+                    </div>  
                     <div class="img-artista">
-                        <img src="../assets/img/cindi-lauper.png" alt="">
-                        <h5>Cindi <br>Lauper</h5>
+                        <img src="../assets/img/cyndi-lauper.png" alt="">
+                        <h5>Cyndi <br>Lauper</h5>
                     </div>
                     <div class="img-artista">
                         <img src="../assets/img/stevie-wonder.png" alt="">
                         <h5>Stevie <br>Wonder</h5>
                     </div>
+                    
                 </div>
                 
             </div>
@@ -225,11 +257,11 @@
 
     <section id="player-title">
         <div class="div-respiro">
-            <h1>Trilhas Inesquecíveis</h1>
+            <h1>Trilhas Internacionais</h1>
         </div>
     </section>
 
-    <section id="player">
+    <section id="trilhas">
         <div class="div-player-1">
             <div class="card">
                 <div class="top">
@@ -239,41 +271,44 @@
                   <div class="texts">
                     <p class="title-1">Careless Whisper</p>
                     <p class="title-2">George Michael</p>
-                    <p class="title-1">1984</p>
+                    <p class="title-2">1984</p>
                   </div>
                 </div>
                 <div class="controls">
-                    <i id="play_music" class="ph-thin ph-play"></i>
+                    <i id="george-michael-careless-whisper.mp3" class="ph-thin ph-play" onclick="tocar_musica(id)" ></i>
+                    <i id="george-michael-careless-whisper" class="ph-thin ph-plus" onclick="add_playlist(id)"></i>
                 </div>
-              </div> 
+            </div> 
               <div class="card">
                 <div class="top">
                   <div class="pfp">
                       <img src="../assets/img/michael-jackson.png" alt="">
                   </div>
                   <div class="texts">
-                    <p class="title-1">Billie Jean</p>
+                    <p class="title-1">Rock With You</p>
                     <p class="title-2">Michael Jackson</p>
-                    <p class="title-1">1983</p>
+                    <p class="title-2">1979</p>
                   </div>
                 </div>
                 <div class="controls">
-                    <i id="play_music" class="ph-thin ph-play"></i>
+                    <i id="michael-jackson-rock-with-you.mp3" class="ph-thin ph-play" onclick="tocar_musica(id)" ></i>
+                    <i id="michael-jackson-rock-with-you" class="ph-thin ph-plus" onclick="add_playlist(id)"></i>
                 </div>
               </div>   
               <div class="card">
                 <div class="top">
                   <div class="pfp">
-                      <img src="../assets/img/george-michael.png" alt="">
+                      <img src="../assets/img/bee-gees.png" alt="">
                   </div>
                   <div class="texts">
                     <p class="title-1">You Should Be Dancing</p>
                     <p class="title-2">Bee Gees</p>
-                    <p class="title-1">1977</p>
+                    <p class="title-2">1976</p>
                   </div>
                 </div>
                 <div class="controls">
-                    <i id="play_music" class="ph-thin ph-play"></i>
+                    <i id="bee-gees-you-should.mp3" class="ph-thin ph-play" onclick="tocar_musica(id)" ></i>
+                    <i id="bee-gees-you-should" class="ph-thin ph-plus" onclick="add_playlist(id)"></i>
                 </div>
               </div>        
         </div>
@@ -281,48 +316,107 @@
             <div class="card">
                 <div class="top">
                   <div class="pfp">
-                      <img src="../assets/img/george-michael.png" alt="">
+                      <img src="../assets/img/earth-wind.png" alt="">
                   </div>
                   <div class="texts">
-                    <p class="title-1">Careless Whisper</p>
-                    <p class="title-2">George Michael</p>
+                    <p class="title-1">September</p>
+                    <p class="title-2">Earth, Wind & Fire</p>
+                    <p class="title-2">1978</p>
                   </div>
                 </div>
                 <div class="controls">
-                    <i id="play_music" class="ph-thin ph-play"></i>
+                    <i id="earth-september.mp3" class="ph-thin ph-play" onclick="tocar_musica(id)" ></i>
+                    <i id="earth-september" class="ph-thin ph-plus" onclick="add_playlist(id)"></i>
                 </div>
-              </div> 
+            </div> 
               <div class="card">
                 <div class="top">
                   <div class="pfp">
-                      <img src="../assets/img/george-michael.png" alt="">
+                      <img src="../assets/img/village.png" alt="">
                   </div>
                   <div class="texts">
-                    <p class="title-1">Careless Whisper</p>
-                    <p class="title-2">George Michael</p>
+                    <p class="title-1">Macho Man</p>
+                    <p class="title-2">Village People</p>
+                    <p class="title-2">1978</p>
                   </div>
                 </div>
                 <div class="controls">
-                    <i id="play_music" class="ph-thin ph-play"></i>
+                    <i id="village-macho.mp3" class="ph-thin ph-play" onclick="tocar_musica(id)" ></i>
+                    <i id="village-macho" class="ph-thin ph-plus" onclick="add_playlist(id)"></i>
                 </div>
               </div>   
               <div class="card">
                 <div class="top">
                   <div class="pfp">
-                      <img src="../assets/img/george-michael.png" alt="">
+                      <img src="../assets/img/kool.png" alt="">
                   </div>
                   <div class="texts">
-                    <p class="title-1">Careless Whisper</p>
-                    <p class="title-2">George Michael</p>
+                    <p class="title-1">Celebration</p>
+                    <p class="title-2">Kool & The Gang</p>
+                    <p class="title-2">1980</p>
                   </div>
                 </div>
                 <div class="controls">
-                    <i id="play_music" class="ph-thin ph-play"></i>
+                    <i id="kool-celebration.mp3" class="ph-thin ph-play" onclick="tocar_musica(id)" ></i>
+                    <i id="kool-celebration" class="ph-thin ph-plus" onclick="add_playlist(id)"></i>
+                </div>
+              </div>        
+        </div>
+        <div class="div-player-3">
+            <div class="card">
+                <div class="top">
+                  <div class="pfp">
+                      <img src="../assets/img/cyndi.png" alt="">
+                  </div>
+                  <div class="texts">
+                    <p class="title-1">Girls Just Want To Have Fun</p>
+                    <p class="title-2">Cyndi Lauper</p>
+                    <p class="title-2">1983</p>
+                  </div>
+                </div>
+                <div class="controls">
+                    <i id="cyndi-girls.mp3" class="ph-thin ph-play" onclick="tocar_musica(id)" ></i>
+                    <i id="cyndi-girls" class="ph-thin ph-plus" onclick="add_playlist(id)"></i>
+                </div>
+            </div> 
+              <div class="card">
+                <div class="top">
+                  <div class="pfp">
+                      <img src="../assets/img/whitney.png" alt="">
+                  </div>
+                  <div class="texts">
+                    <p class="title-1">I Wanna Dance With Somebody</p>
+                    <p class="title-2">Whitney Houston</p>
+                    <p class="title-2">1987</p>
+                  </div>
+                </div>
+                <div class="controls">
+                    <i id="whitney-dance.mp3" class="ph-thin ph-play" onclick="tocar_musica(id)" ></i>
+                    <i id="whitney-dance" class="ph-thin ph-plus" onclick="add_playlist(id)"></i>
+                </div>
+              </div>   
+              <div class="card">
+                <div class="top">
+                  <div class="pfp">
+                      <img src="../assets/img/madonna.png" alt="">
+                  </div>
+                  <div class="texts">
+                    <p class="title-1">Holiday</p>
+                    <p class="title-2">Madonna</p>
+                    <p class="title-2">1983</p>
+                  </div>
+                </div>
+                <div class="controls">
+                    <i id="madonna-holiday.mp3" class="ph-thin ph-play" onclick="tocar_musica(id)" ></i>
+                    <i id="madonna-holiday" class="ph-thin ph-plus" onclick="add_playlist(id)"></i>
                 </div>
               </div>        
         </div>
         
+        
     </section>
+
+    
     <!--
         QUIZ -
         (TITULO / PEQUENO TEXTO / BOTÃO 'FAÇA JÁ O QUIZ')

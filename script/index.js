@@ -1,3 +1,4 @@
+
 /* Rolagem do HEADER - INICIO */
 window.addEventListener("scroll", function() {
     var header = document.querySelector('#header')
@@ -43,25 +44,75 @@ document.querySelector(".next").addEventListener("click", () => plusSlides(1));
 // })
 /* FUNCAO - FIM */
 
-var audio = new Audio('../assets/src/george-michael-careless-whisper.mp3');
+// var audio = new Audio('../assets/src/george-michael-careless-whisper.mp3');
+
 
 var ligado = false;
+var audio;
+var music_playing = 0;
 
-const play_music = document.getElementById("play_music");
-
-play_music.addEventListener('click', tocar_musica);
-
-function tocar_musica() {
-    if (ligado == false) {
+function tocar_musica(caminho_musica) {
+    var play_music = document.getElementById(caminho_musica);
+    if (music_playing == 0) 
+    {
+        audio = new Audio('../assets/src/' + caminho_musica);
+        music_playing = caminho_musica;
         audio.play();
-        ligado = true;
         play_music.classList.add('ph-pause');
         play_music.classList.remove('ph-play');
-    } else {
+    } 
+    else if (music_playing != caminho_musica) 
+    {
         audio.pause();
-        ligado = false;
+        audio = new Audio('../assets/src/' + caminho_musica);
+        play_last_music = document.getElementById(music_playing);
+        music_playing = caminho_musica;
+        play_last_music.classList.remove('ph-pause');
+        play_last_music.classList.add('ph-play');
+        play_music.classList.add('ph-pause');
+        play_music.classList.remove('ph-play');
+        audio.play(); 
+    } 
+    else 
+    {
+        audio.pause();
+        music_playing = 0;
         play_music.classList.remove('ph-pause');
         play_music.classList.add('ph-play');
     }
+
+        audio.addEventListener('ended', function() {
+        play_music.classList.remove('ph-pause');
+        play_music.classList.add('ph-play');
+    });
 }
+
+var playlist = [];
+
+function add_playlist(caminho_musica) {
+    var play_music = document.getElementById(caminho_musica);
+    var caminho = '../assets/src/' + caminho_musica;
+    var existe = false;
+    for (var i = 0; i < playlist.length; i++) {
+        if (playlist[i] == caminho) {
+            playlist.splice(i, 1);
+            existe = true;
+            play_music.classList.remove('ph-check');
+            play_music.classList.add('ph-plus');
+        } 
+    }  
+    if (existe == false) {
+        playlist.push(caminho);
+        play_music.classList.remove('ph-plus');
+        play_music.classList.add('ph-check');
+    }
+    console.log(playlist);
+}
+
+
+
+
+
+
+
 

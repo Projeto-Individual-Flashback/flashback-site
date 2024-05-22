@@ -515,20 +515,23 @@ header.rolagem {
     color: #f4f4f4;
 }
 
-#player {
-    background-color: #f74b6f;
+#trilhas {
+    background: linear-gradient(to left, #a02ff2, #f74b6f);
     height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    .div-player-1, .div-player-2 {
+    .div-player-1, .div-player-2, .div-player-3 {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
+        width: 1600px;
+        height: 200px;
+        
         .card {
             position: relative;
-            width: 500px;
+            width: 450px;
             height: 130px;
             background: #140535;
             border-radius: 20px;
@@ -562,15 +565,15 @@ header.rolagem {
           
           .title-1 {
             color: white;
-            font-size: 25px;
+            font-size: 20px;
             font-weight: bolder;
             margin-left: 5px;
           }
           
           .title-2 {
             color: lightgrey;
-            font-size: 12px;
-            font-weight: bold;
+            font-size: 18px;
+            font-weight: lighter;
             margin-top: -7px;
             margin-left: 5px;
           }
@@ -581,7 +584,7 @@ header.rolagem {
             position: absolute;
             bottom: 30px;
             width: 100%;
-            margin-left: 25px;
+            margin-left: 130px;
             justify-content: center;
             i {
                 scale: 3;
@@ -590,8 +593,7 @@ header.rolagem {
           }
     }
     
-      
-     
+
 }
 
 #quiz {
