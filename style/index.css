@@ -328,7 +328,7 @@ header.rolagem {
 }
 
 #sobre {
-    height: 80vh;
+    height: 100vh;
     padding: 0 10%;
     background-color: #140535;
     background-position: center;
@@ -340,13 +340,13 @@ header.rolagem {
     aside {
         color:#f4f4f4;
         width: 100vw;
-        height: 40vh;
+        height: 70vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
         h1 {
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
 
         button {
@@ -372,7 +372,7 @@ header.rolagem {
 }
 
 #evento-rir {
-    height: 70vh;
+    height: 100vh;
     padding: 0 10%;
     background-color: #f4f4f4;
     background-position: center;
@@ -442,7 +442,7 @@ header.rolagem {
 
 #evento-ufa {
     margin-bottom: 10vh;
-    height: 70vh;
+    height: 100vh;
     padding: 0 10%;
     background-color: #f4f4f4;
     background-position: center;
@@ -515,9 +515,18 @@ header.rolagem {
     color: #f4f4f4;
 }
 
+#player-title-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#f4f4f4;
+    height: 12vh;
+    color: #140535;
+}
+
 #trilhas {
     background: linear-gradient(to left, #a02ff2, #f74b6f);
-    height: 80vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -526,14 +535,23 @@ header.rolagem {
     .div-player-1, .div-player-2, .div-player-3 {
         display: flex;
         justify-content: space-around;
-        width: 1600px;
-        height: 200px;
+        width: 1400px;
+        height: 150px;
         
         .card {
             position: relative;
             width: 450px;
             height: 130px;
-            background: #140535;
+            background-color:#140535;
+            border-radius: 20px;
+            padding: 10px;
+          }
+
+          .card2 {
+            position: relative;
+            width: 450px;
+            height: 130px;
+            background-color:#0a011e;
             border-radius: 20px;
             padding: 10px;
           }
@@ -565,15 +583,15 @@ header.rolagem {
           
           .title-1 {
             color: white;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bolder;
             margin-left: 5px;
           }
           
           .title-2 {
             color: lightgrey;
-            font-size: 18px;
-            font-weight: lighter;
+            font-size: 14px;
+            font-weight: normal;
             margin-top: -7px;
             margin-left: 5px;
           }
@@ -587,8 +605,15 @@ header.rolagem {
             margin-left: 130px;
             justify-content: center;
             i {
-                scale: 3;
+                scale: 2;
                 margin: 10px 30px;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+            i:hover {
+                scale: 2.5;
+                color:#f74b6f;
+                transition: 0.5s;
             }
           }
     }
@@ -613,7 +638,7 @@ header.rolagem {
     background: linear-gradient(to right, #a02ff2, #f74b6f);
     background-position: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     color:#f4f4f4;
 }

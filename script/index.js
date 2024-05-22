@@ -97,14 +97,14 @@ function add_playlist(caminho_musica) {
         if (playlist[i] == caminho) {
             playlist.splice(i, 1);
             existe = true;
-            play_music.classList.remove('ph-check');
-            play_music.classList.add('ph-plus');
+            play_music.classList.remove('ph-fill');
+            play_music.classList.add('ph-thin'); 
         } 
     }  
     if (existe == false) {
         playlist.push(caminho);
-        play_music.classList.remove('ph-plus');
-        play_music.classList.add('ph-check');
+        play_music.classList.remove('ph-thin');
+        play_music.classList.add('ph-fill');
     }
     console.log(playlist);
 }
