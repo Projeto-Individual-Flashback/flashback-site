@@ -88,25 +88,39 @@ function tocar_musica(caminho_musica) {
 }
 
 var playlist = [];
+const minha_playlist = document.getElementById('minha_playlist');
+const div_playlist = document.querySelectorAll('.div_playlist');
+const nome_musica = document.querySelector('.nome_musica');
+const titulo_musica = document.querySelectorAll('.title-1');
+
+
+var title = document.querySelector('title-1');
+
 
 function add_playlist(caminho_musica) {
     var play_music = document.getElementById(caminho_musica);
     var caminho = '../assets/src/' + caminho_musica;
     var existe = false;
+    
     for (var i = 0; i < playlist.length; i++) {
+        // Tem link igual no caminho? Se tiver...
         if (playlist[i] == caminho) {
-            playlist.splice(i, 1);
+            playlist.splice(i, 1); // Tira a musica da lista
+            nome_musica.innerHTML = playlist;
             existe = true;
             play_music.classList.remove('ph-fill');
             play_music.classList.add('ph-thin'); 
         } 
     }  
     if (existe == false) {
-        playlist.push(caminho);
+        playlist.push(caminho); // Add a musica da lista
+        nome_musica.innerHTML = playlist[i];
         play_music.classList.remove('ph-thin');
         play_music.classList.add('ph-fill');
     }
     console.log(playlist);
+    
+
 }
 
 

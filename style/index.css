@@ -28,7 +28,7 @@ h1 {
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 40px;
 }
 
 h4 {
@@ -44,7 +44,8 @@ h5 {
     font-size: 16px;
 }
 
-
+.titulo-inicial {
+}
 
 
 /* CONTÉUDO COM MARGEM */
@@ -366,15 +367,24 @@ header.rolagem {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f74b6f;
+    background-color: #f4f4f4;
     height: 12vh;
-    color: #f4f4f4;
+    color: #140535;
+    .div-respiro {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 95%;
+    }
 }
+
+
+
 
 #evento-rir {
     height: 100vh;
     padding: 0 10%;
-    background-color: #f4f4f4;
+    background-color: #e0e0e0;
     background-position: center;
     display: flex;
     justify-content: center;
@@ -510,18 +520,33 @@ header.rolagem {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#140535;
+    background-color: #e0e0e0;
     height: 12vh;
-    color: #f4f4f4;
+    color: #140535;
+    .div-respiro {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 95%;
+    }
+    img {
+        z-index: 60;
+    }
 }
 
 #player-title-2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#f4f4f4;
+    background-color: #f4f4f4;
     height: 12vh;
     color: #140535;
+    .div-respiro {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 95%;
+    }
 }
 
 #trilhas {
@@ -633,7 +658,7 @@ header.rolagem {
 }
 
 #footer {
-    height: 20vh;
+    height: 15vh;
     padding: 0 10%;
     background: linear-gradient(to right, #a02ff2, #f74b6f);
     background-position: center;
@@ -660,6 +685,28 @@ header.rolagem {
     option {
         color: #140535;
         cursor: pointer;
+    }
+}
+
+#minha_playlist {
+    display: flex;
+    flex-direction: column;
+    color: #f4f4f4;
+    background-color: #140535;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+
+    .div_playlist {
+        border-radius: 10px;
+        color: #f4f4f4;
+        display: flex;
+        background: linear-gradient(to right, #a02ff2, #f74b6f);
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 50%;
     }
 }
 
