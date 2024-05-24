@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* 
+    roxo1:  #A02FF2;
+    rosa1:  #f74b6f;
+    azul-marinho: #140535;
+    branco: #f4f4f4;
+*/
+
+/* TODOS OS ELEMENTOS */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* PÁGINA */ 
+html {
+    height: 100vh;
+    background: linear-gradient(to right, #a02ff2, #f74b6f);
+}
+
+body {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 40px;
+    
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 16px;
+    
+}
+
+.gif {
+    width: 100px;
+    position: absolute;
+    margin-top: -40px;
+    transition: 1s;
+    margin-right: 500px;
+}
+
+.gif:hover {
+    width: 200px;
+    transition: 1s;
+    margin-top: -80px;
+}
+
+.div-total {
+    background-color: #140535;
+    height: 95%;
+    width: 90vw;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 2.5vh;
+
+    .div1 {
+        margin-left: 10px;
+        width: 500px;
+    }
+    .div2 {
+        margin-left: 50px;
+        img {
+            border-radius: 20px;
+        }
+    }
+    .div3 {
+        margin-left: 50px;
+        width: 300px;
+    }
+
+}
+
+.btn-pai {
+    padding: 6px; /* Espaçamento interno */
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none; /* Remove a decoração de texto */
+    display: inline-block; /* Exibe o botão como um elemento em linha */
+    font-size: 16px; /* Tamanho do texto */
+    margin: 4px 2px; /* Margem entre os botões */
+    cursor: pointer; /* Cursor do mouse */
+    border-radius: 10px; /* Borda arredondada */
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn1  {
+    margin-bottom: 500px;
+    margin-left: 50px;
+    width: 100%;
+    border: 2px solid #f4f4f4; /* Borda */
+    background-color: #14053500;
+    color: #f4f4f4; /* Cor do texto */
+}
+
+.btn1:hover  {
+    font-size: 21px;
+    border-radius: 25px;
+    background-color: #140535;
+    color: #a02ff2;
+}

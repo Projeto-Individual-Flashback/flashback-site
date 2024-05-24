@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* 
+    roxo1:  #A02FF2;
+    rosa1:  #f74b6f;
+    azul-marinho: #140535;
+    branco: #f4f4f4;
+*/
+
+/* TODOS OS ELEMENTOS */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* PÁGINA */ 
+html {
+    height: 110vh;
+    background-image: url(../../assets/img/banner-star.png);
+    background-repeat: no-repeat;
+}
+
+body {
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+
+}
+
+h1 {
+    font-size: 40px;   
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+
+.gif {
+    width: 100px;
+    position: absolute;
+    margin-top: -40px;
+    transition: 1s;
+}
+
+.gif:hover {
+    width: 200px;
+    transition: 1s;
+    margin-top: -80px;
+}
+.div-total {
+    background-color: #140535;
+    width: 100vh;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2.5vh;
+    color: #f4f4f4;
+
+    .div-titulo {
+        width: 100vh;
+        margin-top: 2vh;
+        display: flex;
+        align-items: center;
+        height: 5vh;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 5vh 100px;
+
+        a {
+            margin-right: 10vh;
+        }
+
+        h1, h2 {
+            color: #f4f4f4;
+        }
+        .btn2  {
+            width: 100%; 
+        }
+        .btn-pai {
+            padding: 5px;
+        }
+        .btn-pai:hover  {
+            width: 100%; 
+        }
+    }
+    .botao1 {
+        margin-top: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5vh;
+
+        h4 {
+            color: #f4f4f4;
+        }
+    }
+
+    .btn-pai {
+        padding: 10px; /* Espaçamento interno */
+        text-align: center; /* Alinhamento do texto */
+        text-decoration: none; /* Remove a decoração de texto */
+        display: inline-block; /* Exibe o botão como um elemento em linha */
+        font-size: 16px; /* Tamanho do texto */
+        margin: 4px 2px; /* Margem entre os botões */
+        cursor: pointer; /* Cursor do mouse */
+        border-radius: 10px; /* Borda arredondada */
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+    .btn-pai:hover {
+        border-radius: 30px; /* Borda arredondada */
+        transition: 0.5s;
+        font-size: 20px;
+    }
+
+    .btn1  {
+        width: 100%;
+        border: 2px solid #f4f4f4; /* Borda */
+        background-color: #14053500;
+        color: #f4f4f4; /* Cor do texto */
+    }
+    
+    .btn1:hover  {
+        background-color: #140535;
+        color: #a02ff2;
+    }
+    
+    .btn2  {
+        width: 100%;
+        border: 2px solid #a02ff2; /* Borda */
+        background: linear-gradient(to right, #a02ff2, #f74b6f);
+        color: #f4f4f4; /* Cor do texto */
+    }
+    .btn2:hover  {
+        border: 2px solid #f4f4f4;
+        background: #140535;
+        color: #a02ff2;
+    }
+    .div-inputs {
+        margin-top: 3vh;
+        width: 60vh;
+    }
+    input {
+        padding: 1vh; /* Espaçamento interno */
+        text-align: start; /* Alinhamento do texto */
+        text-decoration: none; /* Remove a decoração de texto */
+        display: inline-block; /* Exibe o botão como um elemento em linha */
+        font-size: 20px; /* Tamanho do texto */
+        margin: 4px 2px; /* Margem entre os botões */
+        cursor: pointer; /* Cursor do mouse */
+        border-radius: 10px; /* Borda arredondada */
+        transition: 0.5s;
+        width: 100%;
+        align-self: center;
+        cursor: text;
+        border: 2px solid #f4f4f4; /* Borda */
+        background-color: #0d0323;
+        color: #f4f4f4; /* Cor do texto */
+        outline: none;
+    }
+
+    input:hover {
+        display: flex;
+        justify-self: center;
+        border-radius: 30px;
+        padding: 2vh;
+    }
+    .div-btns {
+        width: 60vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 5vh;
+        
+        a{
+            text-decoration: none;
+        }
+    }   
+}
+
+.total-cadastro {
+    height: 95%;
+}
+
+.total-login {
+    height: 60%;
+    margin-top: 20vh;
+}
+
+.botao2:hover {
+    color: #a02ff2;
+}
