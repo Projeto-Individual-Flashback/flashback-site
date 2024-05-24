@@ -699,4 +699,26 @@ header.rolagem {
     }
 }
 
+#div_btns {
+    display: flex;
+}
+
+#div_usuario {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    text-decoration: none;
+
+
+    h5 {
+        color: #f4f4f4;
+    }
+    img {
+        width: 15%;
+        border-radius: 50px;
+    }
+}
+
+
 

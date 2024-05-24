@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/cadastro.css">
 
     <!-- JAVASCRIPT -->
-    <script src="./js/cadastro.js" defer></script>
+    <script src="./js/login.js" defer></script>
 
     <!-- FAVICON -->
     <link rel="icon" href="../assets/img/favicon.png" type="image/x-icon">
@@ -29,9 +29,9 @@
         </div>
         <div class="div-inputs">
             <h5>EMAIL</h5>
-            <input type="text" id="ipt-email" placeholder="Digite seu email">
+            <input type="text" id="ipt_email" placeholder="Digite seu email">
             <h5>SENHA</h5>
-            <input type="password" id="ipt-senha" placeholder="Digite sua senha">
+            <input type="password" id="ipt_senha" placeholder="Digite sua senha">
         </div>
         <div class="div-btns">
             <div class="div-login">
@@ -42,14 +42,12 @@
                     </div>
                 </a>
             </div>
-            
-            <a href="./login.html">
+            <div id="div_erro"></div>
                 <div class="botao3">
-                    <button class="btn-pai btn2">
+                    <button class="btn-pai btn2" onclick="entrar()">
                         ENTRAR
                     </button>
                 </div>
-            </a>
         </div>
     </div>
 </body>

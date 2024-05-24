@@ -9,6 +9,7 @@
 
     <!-- JAVASCRIPT -->
     <script src="./js/index.js" defer></script>
+    <script src="./js/login.js" defer></script>
 
     <!-- ICONES -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -19,7 +20,7 @@
     <!-- NOME ABA -->
     <title>Site - Flashback</title>
 </head>
-<body>
+<body onload="validarSessao()">
     <!-- 
         HEADER - (LOGO / LINKS DE NAVEGAÇÃO / BOTÕES 'CADASTRO' E 'LOGIN') 
     -->
@@ -51,15 +52,21 @@
                         <li><a href="./dashboard.html"> Dashboard </a></li>
                     </ul>
                 </nav>
-                <div class="div-btns">
+                <div id="div_btns" >
                     <a href="./login.html" class="btn-login">
                         <button class="btn1 btn-pai">Login</button>
                     </a>
                     <a href="./cadastro.html" class="btn-cadastro">
                         <button class="btn2 btn-pai">Cadastre-se</button>
                     </a>
-                    
                 </div> 
+                <div id="div_usuario">
+                    <h5>Bem Vindo!</h5>
+                    <img src="./assets/img/cazuza.png" alt="">
+                    <a href="./login.html" class="btn-cadastro" onclick="limparSessao()">
+                        <h5>Sair da Conta</h5>
+                    </a>
+                </div>
             </div>
         </div>
         <!-- GLOBO -->

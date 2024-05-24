@@ -121,10 +121,20 @@ function add_playlist(caminho_musica) {
 
 }
 
+function validarSessao(){
+    var nome = sessionStorage.NOME_USUARIO;
+    if( nome != undefined){
+        document.getElementById("div_btns").style.display = "none";
+        document.getElementById("div_usuario").style.display = "flex";
+    }
+}
 
+function limparSessao() {
+    sessionStorage.clear();
 
-
-
+    document.getElementById("div_btns").style.display = "flex";
+    document.getElementById("div_usuario").style.display = "none";
+}
 
 
 

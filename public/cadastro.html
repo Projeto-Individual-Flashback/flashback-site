@@ -37,9 +37,9 @@
             <h5>SENHA</h5>
             <input type="password" id="ipt_senha" placeholder="Crie uma senha">
             <h5>CONFIRME A SENHA</h5>
-            <input type="password" id="ipt_senha" placeholder="Confirme sua senha">
+            <input type="password" id="ipt_confirmacao" placeholder="Confirme sua senha">
             <h5>ARTISTA FAVORITO</h5>
-            <select>
+            <select id="sel_artista">
                 <option value="1">Michael Jackson</option>
                 <option value="2">Whitney Houston</option>
                 <option value="3">Freddie Mercury</option>
@@ -48,6 +48,7 @@
                 <option value="6">Lulu Santos</option>
             </select>
         </div>
+        <div id="div_erro"></div>
         <div class="div-btns">
             <div class="div-login">
                 Já tem Cadastro?
@@ -57,11 +58,11 @@
                     </div>
                 </a>
             </div>
-            <a href="./index.html">
-                <button class="btn-pai btn2">
+            
+                <button class="btn-pai btn2" onclick="cadastrar()">
                     CADASTRAR
                 </button>
-            </a>
+            
         </div>
     </div>
 </body>
