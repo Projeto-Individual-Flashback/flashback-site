@@ -65,7 +65,7 @@ body {
 .banner {
   height: var(--tamanho-banner);
   color: white;
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+  background-image: url('./assets/imgs/bg-jelly-fish-para-home.png');
   background-size: cover;
 }
 
@@ -141,7 +141,7 @@ body {
 
 .login {
   height: var(--tamanho-login);
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
+  background-image: url('./assets/imgs/bg-jelly-fish-para-home.png');
   background-size: cover;
 }
 

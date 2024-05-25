@@ -44,7 +44,7 @@ document.querySelector(".next").addEventListener("click", () => plusSlides(1));
 // })
 /* FUNCAO - FIM */
 
-// var audio = new Audio('../assets/src/george-michael-careless-whisper.mp3');
+// var audio = new Audio('./assets/src/george-michael-careless-whisper.mp3');
 
 
 var ligado = false;
@@ -55,7 +55,7 @@ function tocar_musica(caminho_musica) {
     var play_music = document.getElementById(caminho_musica);
     if (music_playing == 0) 
     {
-        audio = new Audio('../assets/src/' + caminho_musica);
+        audio = new Audio('./assets/src/' + caminho_musica);
         music_playing = caminho_musica;
         audio.play();
         play_music.classList.add('ph-pause');
@@ -64,7 +64,7 @@ function tocar_musica(caminho_musica) {
     else if (music_playing != caminho_musica) 
     {
         audio.pause();
-        audio = new Audio('../assets/src/' + caminho_musica);
+        audio = new Audio('./assets/src/' + caminho_musica);
         play_last_music = document.getElementById(music_playing);
         music_playing = caminho_musica;
         play_last_music.classList.remove('ph-pause');
@@ -99,7 +99,7 @@ var title = document.querySelector('title-1');
 
 function add_playlist(caminho_musica) {
     var play_music = document.getElementById(caminho_musica);
-    var caminho = '../assets/src/' + caminho_musica;
+    var caminho = './assets/src/' + caminho_musica;
     var existe = false;
     
     for (var i = 0; i < playlist.length; i++) {
@@ -131,7 +131,6 @@ function validarSessao(){
 
 function limparSessao() {
     sessionStorage.clear();
-
     document.getElementById("div_btns").style.display = "flex";
     document.getElementById("div_usuario").style.display = "none";
 }
