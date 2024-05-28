@@ -21,6 +21,7 @@ html {
 
 body {
     overflow-x: hidden;
+    overflow-y: hidden;
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -28,11 +29,14 @@ body {
 
 h1 {
     font-size: 40px;
-    
 }
 
 h2 {
     font-size: 30px;
+}
+
+h3 {
+    font-size: 16px;
 }
 
 h4 {
@@ -41,11 +45,11 @@ h4 {
 }
 
 .gif {
-    width: 100px;
+    width: 200px;
     position: absolute;
-    margin-top: -40px;
+    margin-top: -70px;
     transition: 1s;
-    margin-right: 500px;
+    margin-right: 1000px;
 }
 
 .gif:hover {
@@ -54,32 +58,115 @@ h4 {
     margin-top: -80px;
 }
 
-.div-total {
+.div_total {
     background-color: #140535;
     height: 95%;
-    width: 90vw;
+    width: 95%;
     margin-top: 1%;
     display: flex;
     flex-direction: row;
     align-items: center;
     border-radius: 2.5vh;
 
-    .div1 {
-        margin-left: 10px;
-        width: 500px;
+    .div_lateral {
+        color:#f4f4f4;
+        height: 100%;
+        width: 25%;
+        background-color: #31146f;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 2.5vh 0 0 2.5vh ;
+    }
+    .div_graficos {
+        width: 90%;
+        height: 75%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
     .div2 {
-        margin-left: 50px;
-        img {
-            border-radius: 20px;
-        }
+        color:#f4f4f4;
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
     }
     .div3 {
-        margin-left: 50px;
-        width: 300px;
+        color:#f4f4f4;
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        align-items: center;
+
+    }
+    .div4 {
+        color:#f4f4f4;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .div_titulo {
+        height: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
+    .div_tudo {
+        width: 75%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .div_kpi {
+        width: 25%;
+        height: 70%;
+        margin-bottom: 100px;
+        color: #f4f4f4;
+        background-color: #14053500;
+        border: 1px solid #f4f4f4;
+        box-shadow: none;
+        padding: 5%;
+        border-radius: 20px;
+
+        h3 {
+            color: #f74b6f; 
+        }
+    }
+    .div_kpi:hover {
+        color: #886cdd;
+        background-color: #0b051d;
+        border: 3px solid #886cdd;
+        box-shadow: none;
+        padding: 5%;
+        border-radius: 20px;
+        h3 {
+            color: #f4f4f4; 
+        }
     }
 
 }
+
+a {
+    text-decoration: none;
+}
+
 
 .btn-pai {
     padding: 6px; /* Espaçamento interno */
@@ -95,17 +182,14 @@ h4 {
 }
 
 .btn1  {
-    margin-bottom: 500px;
-    margin-left: 50px;
     width: 100%;
     border: 2px solid #f4f4f4; /* Borda */
     background-color: #14053500;
     color: #f4f4f4; /* Cor do texto */
 }
-
 .btn1:hover  {
-    font-size: 21px;
     border-radius: 25px;
     background-color: #140535;
     color: #a02ff2;
 }
+

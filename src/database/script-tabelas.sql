@@ -16,6 +16,7 @@ CREATE TABLE empresa (
 	cnpj CHAR(14)
 );
 
+
 CREATE TABLE usuario (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),

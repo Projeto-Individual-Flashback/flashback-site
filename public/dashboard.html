@@ -17,26 +17,51 @@
     <link rel="icon" href="./assets/img/favicon.png" type="image/x-icon">
 
     <!-- NOME ABA -->
-    <title>Quiz - Flashback</title>
+    <title>Dashboard - Flashback</title>
 </head>
 <body>
     <img class="gif" src="./assets/img/globo-gif.gif" alt="gif-globo">
     
-    <div class="div-total">
-        <a href="./index.html" class="div_titulo">
-            <button class="btn-pai btn1">
-                < VOLTAR AO SITE
-            </button>
-        </a>
-        <div class="div1">
-            <canvas id="myChart"></canvas>
+    <div class="div_total">
+        <div class="div_lateral">
+            <h1>DASHBOARD</h1>
+            <a class="div_titulo" href="./index.html" >
+                <button class="btn-pai btn1">
+                    < VOLTAR AO SITE
+                </button>
+            </a>
         </div>
-        <div class="div2">
-            <img src="./assets/img/cazuza.png" alt="">
+        <div class="div_tudo">
+            <div class="div_graficos">
+                <div class="div4">
+                    <button class="div_kpi">
+                        <h2>Michael Jackson</h2><br><h3>Artista Favorito</h3>
+                    </button>
+                    <button class="div_kpi">
+                        <h2>'Rock With You'</h2><br><h3>Música <br>Mais Ouvida</h3>
+                    </button>
+                    <button class="div_kpi">
+                        <h1>8</h1><br><h3>Internacionais <br>Favoritas</h3>
+                    </button>
+                    <button class="div_kpi">
+                        <h1>5</h1><br><h3>Nacionais <br>Favoritas</h3>
+                    </button>
+                </div>
+            </div>
+            <div class="div_graficos">
+                <div class="div2">
+                    <div style="width: 70%; margin: auto;">
+                        <canvas id="meuGraficoDeBarras"></canvas>
+                    </div>
+                </div>
+                <div class="div3">
+                    <div style="width: 70%; margin: auto;">
+                        <canvas id="myPieChart"></canvas>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="div3">
-            <canvas id="pieChart"></canvas>
-        </div>
-
+        
+    
     </div>
 </body>

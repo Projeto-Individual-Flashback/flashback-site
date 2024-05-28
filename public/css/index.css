@@ -44,9 +44,6 @@ h5 {
     font-size: 16px;
 }
 
-.titulo-inicial {
-}
-
 
 /* CONTÉUDO COM MARGEM */
 .header-container {
@@ -691,7 +688,7 @@ header.rolagem {
         border-radius: 10px;
         color: #f4f4f4;
         display: flex;
-        background: linear-gradient(to right, #a02ff2, #f74b6f);
+        background: linear-gradient(to right, rgb(242, 47, 47), #f74b6f);
         align-items: center;
         justify-content: center;
         height: 100%;
