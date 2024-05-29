@@ -3,10 +3,10 @@ var ctx = document.getElementById('meuGraficoDeBarras').getContext('2d');
 
 // Dados para o gráfico
 var dados = {
-    labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+    labels: ['Michael Jackson', 'Madonna', 'Freddie Mercury', 'Cazuza', 'Rita Lee'],
     datasets: [{
-        label: 'Vendas',
-        data: [120, 150, 180, 70, 200, 170],
+        label: 'Usuários',
+        data: [120, 150, 180, 70, 200],
         backgroundColor: '#f74b6f',
     }]
 };
@@ -34,15 +34,14 @@ var ctx2 = document.getElementById('myPieChart').getContext('2d');
 var myPieChart = new Chart(ctx2, {
     type: 'pie', // Tipo do gráfico
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green'], // Etiquetas das partes da pizza
+        labels: ['Musica 1', 'Musica 2', 'Musica 3'], // Etiquetas das partes da pizza
         datasets: [{
             label: 'Dataset 1', // Etiqueta do conjunto de dados
-            data: [12, 19, 3, 5], // Dados do gráfico
+            data: [12, 19, 3], // Dados do gráfico
             backgroundColor: [
                 '#f74b6f',
                 '#a02ff2',
                 '#f4f4f4',
-                '#f22f2f'
             ],
             borderWidth: 1 // Largura da borda
         }]

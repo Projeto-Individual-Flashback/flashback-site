@@ -28,7 +28,7 @@ body {
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 52px;
 }
 
 h2 {
@@ -113,7 +113,7 @@ h4 {
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
     }
 
@@ -193,3 +193,10 @@ a {
     color: #a02ff2;
 }
 
+.bar {
+    width: 100%; margin: auto;
+}
+
+.pizza {
+    width: 50%; margin: auto;
+}

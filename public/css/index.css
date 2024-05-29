@@ -45,6 +45,7 @@ h5 {
 }
 
 
+
 /* CONTÉUDO COM MARGEM */
 .header-container {
     justify-content: center;
@@ -638,6 +639,10 @@ header.rolagem {
                 transition: 0.5s;
             }
           }
+
+          .controls2 {
+            margin-bottom: 50px;
+          }
     }
     
 
@@ -698,6 +703,8 @@ header.rolagem {
 
 #div_btns {
     display: flex;
+    width: 400px;
+    justify-content: space-around;
 }
 
 #div_usuario {
@@ -715,7 +722,13 @@ header.rolagem {
         width: 15%;
         border-radius: 50px;
     }
+
 }
 
+.cazuza_img {
+    background-image: url(../assets/img/cazuza.png);
+}
 
-
+.rita_img {
+    background-image: url(../assets/img/rita-lee.png);
+}
