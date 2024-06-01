@@ -47,6 +47,7 @@ function entrar() {
         } else {
 
             console.log("Houve um erro ao tentar realizar o login!");
+            alert('Email ou senha inválidos!')
 
             resposta.text().then(texto => {
                 console.error(texto);

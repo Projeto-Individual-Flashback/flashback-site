@@ -186,7 +186,6 @@ header.rolagem {
     cursor: pointer; /* Cursor do mouse */
     border-radius: 10px; /* Borda arredondada */
     transition: 0.5s;
-    cursor: pointer;
 }
 
 .btn-slider {
@@ -731,4 +730,8 @@ header.rolagem {
 
 .rita_img {
     background-image: url(../assets/img/rita-lee.png);
+}
+
+#li_dash {
+    display: none;
 }

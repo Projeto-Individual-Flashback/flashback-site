@@ -37,13 +37,6 @@ document.querySelector(".prev").addEventListener("click", () => plusSlides(-1));
 document.querySelector(".next").addEventListener("click", () => plusSlides(1));
 /* SLIDEBANNER - FIM */
 
-/* FUNCAO - INICIO */
-// window.addEventListener("scroll", function() {
-//     var header = document.querySelector('#header')
-//     header.classList.toggle('rolagem', window.scrollY > 0);
-// })
-/* FUNCAO - FIM */
-
 // var audio = new Audio('./assets/src/george-michael-careless-whisper.mp3');
 
 
@@ -148,6 +141,8 @@ function validarSessao(){
 
         document.getElementById("div_btns").style.display = "none";
         document.getElementById("div_usuario").style.display = "flex";
+        document.getElementById("li_dash").style.display = "flex";
+
     }
     else {
         document.getElementById("tema-rock").style.display = 'none';
@@ -177,6 +172,7 @@ function limparSessao() {
     sessionStorage.clear();
     document.getElementById("div_btns").style.display = "flex";
     document.getElementById("div_usuario").style.display = "none";
+    document.getElementById("li_dash").style.display = "none";
 }
 
 document.getElementById("imagem_usuario");
