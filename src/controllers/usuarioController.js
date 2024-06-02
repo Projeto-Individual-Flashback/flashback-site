@@ -50,6 +50,7 @@ function cadastrar(req, res) {
     var email = req.body.emailServer;
     var senha = req.body.senhaServer;
     var artista = req.body.artistaServer;
+    var genero = req.body.generoServer;
 
     // Faça as validações dos valores
     if (nome == undefined) {
@@ -62,12 +63,59 @@ function cadastrar(req, res) {
         res.status(400).send("Sua senha está undefined!");
     } else if (artista == undefined) {
         res.status(400).send("Sua artista está undefined!");
-    } else {
+    } else if (genero == undefined) {
+        res.status(400).send("Seu gênero está undefined!");
+    }else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, sobrenome, email, senha, artista)
+        usuarioModel.cadastrar(nome, sobrenome, email, senha, artista, genero)
             .then(
                 function (resultado) {
+                    console.log(resultado);
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
+function cadastrarMusica(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var nome = req.body.nomeServer;
+    var sobrenome = req.body.sobrenomeServer;
+    var email = req.body.emailServer;
+    var senha = req.body.senhaServer;
+    var artista = req.body.artistaServer;
+    var genero = req.body.generoServer;
+
+    // Faça as validações dos valores
+    if (nome == undefined) {
+        res.status(400).send("Seu nome está undefined!");
+    } else if (sobrenome == undefined) {
+        res.status(400).send("Seu sobrenome está undefined!");
+    }   else if (email == undefined) {
+        res.status(400).send("Seu email está undefined!");
+    } else if (senha == undefined) {
+        res.status(400).send("Sua senha está undefined!");
+    } else if (artista == undefined) {
+        res.status(400).send("Sua artista está undefined!");
+    } else if (genero == undefined) {
+        res.status(400).send("Seu gênero está undefined!");
+    }else {
+
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.cadastrar(nome, sobrenome, email, senha, artista, genero)
+            .then(
+                function (resultado) {
+                    console.log(resultado);
                     res.json(resultado);
                 }
             ).catch(
@@ -85,5 +133,6 @@ function cadastrar(req, res) {
 
 module.exports = {
     autenticar,
-    cadastrar
+    cadastrar,
+    cadastrarMusica
 }

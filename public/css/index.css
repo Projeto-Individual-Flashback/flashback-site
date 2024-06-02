@@ -84,7 +84,7 @@ h5 {
 header {
     width: 100%;
     height: auto;
-    padding: 2% 5%;
+    padding: 2vh 2%;
     position: fixed;
     top: 0;
     left: 0;
@@ -102,16 +102,24 @@ header {
         margin: 0 2vh;
     }
     .navbar {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width:50%;
         a {
             color: #f4f4f4;
             text-decoration: none;
             font-size: 16px;
+            padding: 6px 20px;
+            transition: 0.5s;
         }
         a:hover{
             background-color: #140535;
             color: #a02ff2;
-            font-size: 20px;
-            transition: 0.5s
+            transition: 0.5s;
+            border: 2px solid #f4f4f4; /* Borda */
+            border-radius: 30px; /* Borda arredondada */
+            /* transform: skew(5deg, 5deg); */
         }
     }
     
@@ -141,21 +149,6 @@ header.rolagem {
     }
 }
 
-.navbar {
-    a {
-        padding: 6px 20px;
-        color:#f4f4f4;
-        transition: 0.5s;
-    }
-    a:hover {
-        border: 2px solid #f4f4f4; /* Borda */
-        border-radius: 30px; /* Borda arredondada */
-        color:#140535;
-        font-size: 20px;
-        transition: 0.5s;
-        /* transform: skew(5deg, 5deg); */
-    }
-}
 
 .dropdown:hover .dropdown-content {
     /* background-color: #140535; */
@@ -650,7 +643,7 @@ header.rolagem {
 #footer {
     height: 15vh;
     padding: 0 10%;
-    background-color: #140535;
+    background-color:  #0a011e;
     background-position: center;
     display: flex;
     justify-content: space-around;
@@ -713,6 +706,11 @@ header.rolagem {
     width: 400px;
     text-decoration: none;
 
+    span {
+        background: linear-gradient(to right, #ddb5f9, #f3a1b3); /* Define o degradê de fundo */
+        -webkit-background-clip: text; /* Define o recorte do texto para o degradê */
+        -webkit-text-fill-color: transparent; /* Torna o texto transparente */
+    }
 
     h5 {
         color: #f4f4f4;
@@ -720,6 +718,19 @@ header.rolagem {
     img {
         width: 15%;
         border-radius: 50px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .sair{
+        transition: 0.5s;
+    }
+
+    .sair:hover {
+        color:#a02ff2;
+        transition: 0.5s;
     }
 
 }
@@ -732,6 +743,42 @@ header.rolagem {
     background-image: url(../assets/img/rita-lee.png);
 }
 
-#li_dash {
-    display: none;
+#festas {
+    height: 60vh;
+    padding: 0 10%;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aside {
+        color:#f4f4f4;
+        width: 100vw;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 25%;
+        }
+
+    }
+    article {
+        margin-left: 10vw;
+    }
+    img {
+        border-radius: 25px;
+    }
 }
+
+.festas1 {
+    background-color: #31146f;
+}
+.festas2 {
+    background-color: #250d5a;
+}
+

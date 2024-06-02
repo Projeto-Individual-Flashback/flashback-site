@@ -138,10 +138,17 @@ function validarSessao(){
         document.getElementById("tema-paralamas").style.display = 'block';
         document.getElementById("tema-rpm").style.display = 'block';
 
+        document.getElementById('nome_usuario').innerHTML = nome + '!';
+
 
         document.getElementById("div_btns").style.display = "none";
         document.getElementById("div_usuario").style.display = "flex";
-        document.getElementById("li_dash").style.display = "flex";
+        // document.getElementById("li_dash").style.display = "flex";
+
+        let HTML = '<a href="./dashboard.html"> Dashboard </a>';
+        document.getElementById("li_dash").innerHTML = HTML;
+
+
 
     }
     else {
@@ -172,9 +179,9 @@ function limparSessao() {
     sessionStorage.clear();
     document.getElementById("div_btns").style.display = "flex";
     document.getElementById("div_usuario").style.display = "none";
-    document.getElementById("li_dash").style.display = "none";
+    // document.getElementById("li_dash").style.display = "none";
 }
 
-document.getElementById("imagem_usuario");
+
 
 

@@ -32,7 +32,7 @@
                     <img class="logo-flashback" src="./assets/img/logo-flashback.png" alt="">
                 </a>
                 <!-- LINKS DE NAVEGAÇÃO -->
-                <nav class="navbar">
+                <nav class="navbar" id="nav1">
                     <ul class="nav-list">
                         <li><a href="#sobre"> Sobre </a></li>
                         <li class="dropdown">
@@ -49,8 +49,9 @@
                                 <li><a href="#player-title-2">Trilhas Nacionais</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Quiz</a></li>
-                        <li id="li_dash"><a href="./dashboard.html"> Dashboard </a></li>
+                        <li><a href="#festas">Festas</a></li>
+                        <!-- <li id="li_dash"><a href="./dashboard.html"> Dashboard </a></li> -->
+                        <li id="li_dash"></li>
                     </ul>
                 </nav>
                 <div id="div_btns" >
@@ -62,10 +63,10 @@
                     </a>
                 </div> 
                 <div id="div_usuario">
-                    <h5>Bem Vindo!</h5>
+                    <h5>Bem Vindo <span id="nome_usuario">Matheus</span></h5>
                     <img id="imagem_usuario" src="./assets/img/cazuza.png" class="" alt="">
                     <a href="./login.html" class="btn-cadastro" onclick="limparSessao()">
-                        <h5>Sair da Conta</h5>
+                        <h5 class="sair">Sair da Conta</h5>
                     </a>
                 </div>
             </div>
@@ -586,13 +587,63 @@
               </div>        
         </div>
     </section>
+
+    <section id="player-title-2">
+        <div class="div-respiro">
+            <h1>Festas</h1>
+        </div>
+    </section>
+
+    <section id="festas" class="festas1">
+        <aside class="texto">
+            <h1>Memphis Rock Bar</h1>
+            <h5>Endereço:<p>
+                Avenida Dos Imarés, 295 - Moema
+            </p></h5>
+            <!-- <button class="btn2 btn-pai">
+                Saiba Mais
+            </button> -->
+        </aside>
+        <article>
+            <img width="400px"src="./assets/img/the-history.jpg" alt="">
+        </article>
+    </section>
+
+    <section id="festas" class="festas2">
+        <aside class="texto">
+            <h1>The History</h1>
+            <h5>Endereço:<p>
+                R. Gomes de Carvalho, 820 - Vila Olímpia, São Paulo - SP, 04547-003
+            </p></h5>
+            <!-- <button class="btn2 btn-pai">
+                Saiba Mais
+            </button> -->
+        </aside>
+        <article>
+            <img width="400px"src="./assets/img/the-history.jpg" alt="">
+        </article>
+    </section>
+    <section id="festas" class="festas1">
+        <aside class="texto">
+            <h1>Limelight</h1>
+            <h5>Endereço:<p>
+                Av Doutor Cardoso de Melo, 1433 - Vila Olímpia
+            </p></h5>
+            <!-- <button class="btn2 btn-pai">
+                Saiba Mais
+            </button> -->
+        </aside>
+        <article>
+            <img width="400px"src="./assets/img/the-history.jpg" alt="">
+        </article>
+    </section>
     <!--
         FOOTER -
         (LINKS DE NAV / AGRADECIMENTO / LOGO)
     -->
     <footer id="footer">
         <a href="#">
-            <img style="width:150px" class="logo-flashback" src="./assets/img/logo-flashback-2.png" alt="">
+            <img style="width:150px" class="logo-flashback" src="./assets/img/logo-flashback.png" alt="">
         </a>
         <a href="https://github.com/matheusressu" target="_blank">
             <img style="width:60px" src="./assets/img/git-hub.png" alt="">

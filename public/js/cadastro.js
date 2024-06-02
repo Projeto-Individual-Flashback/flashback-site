@@ -7,13 +7,16 @@ function cadastrar() {
     var senhaVar = ipt_senha.value;
     var confirmacaoSenhaVar = ipt_confirmacao.value;
     var artistaVar = sel_artista.value;
+    var generoVar = sel_genero.value; 
+    console.log(generoVar);
     if (
       nomeVar == "" ||
       sobrenomeVar == "" ||
       emailVar == "" ||
       senhaVar == "" ||
       confirmacaoSenhaVar == "" ||
-      artistaVar == ""
+      artistaVar == "" ||
+      generoVar == ""
     ) {
       // cardErro.style.display = "block";
       // mensagem_erro.innerHTML =
@@ -37,12 +40,19 @@ function cadastrar() {
         sobrenomeServer: sobrenomeVar,
         emailServer: emailVar,
         senhaServer: senhaVar,
-        artistaServer: artistaVar
+        artistaServer: artistaVar,
+        generoServer: generoVar
       }),
     })
       .then(function (resposta) {
         console.log("resposta: ", resposta);
 
+        if (senhaVar !== confirmacaoSenhaVar) {
+          // Se a senha e a confirmação de senha não forem iguais, exiba uma mensagem de erro
+          alert('As senhas não coincidem. Por favor, verifique e tente novamente.');
+          return; // Encerra a execução do código nesta etapa
+        
+        }
         if (resposta.ok) {
           // cardErro.style.display = "block";
 
