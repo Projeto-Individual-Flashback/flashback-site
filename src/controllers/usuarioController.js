@@ -25,6 +25,8 @@ function autenticar(req, res) {
                                         sobrenome: resultadoAutenticar[0].sobrenome,
                                         email: resultadoAutenticar[0].email,
                                         senha: resultadoAutenticar[0].senha,
+                                        artistaFavorito: resultadoAutenticar[0].artistaFavorito,
+                                        generoFavorito: resultadoAutenticar[0].generoFavorito,
                                     });
                     } else if (resultadoAutenticar.length == 0) {
                         res.status(403).send("Email e/ou senha inválido(s)");
@@ -87,52 +89,45 @@ function cadastrar(req, res) {
     }
 }
 
-function cadastrarMusica(req, res) {
-    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
-    var nome = req.body.nomeServer;
-    var sobrenome = req.body.sobrenomeServer;
-    var email = req.body.emailServer;
-    var senha = req.body.senhaServer;
-    var artista = req.body.artistaServer;
-    var genero = req.body.generoServer;
+function viewArtistaFav(req, res) {
+    
+    var tabela = req.body.tabela;
 
-    // Faça as validações dos valores
-    if (nome == undefined) {
-        res.status(400).send("Seu nome está undefined!");
-    } else if (sobrenome == undefined) {
-        res.status(400).send("Seu sobrenome está undefined!");
-    }   else if (email == undefined) {
-        res.status(400).send("Seu email está undefined!");
-    } else if (senha == undefined) {
-        res.status(400).send("Sua senha está undefined!");
-    } else if (artista == undefined) {
-        res.status(400).send("Sua artista está undefined!");
-    } else if (genero == undefined) {
-        res.status(400).send("Seu gênero está undefined!");
-    }else {
+    usuarioModel.viewArtistaFav(tabela)
+    .then(
+        function (resultadoAutenticar) {
+            console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
+            console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
 
-        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrar(nome, sobrenome, email, senha, artista, genero)
-            .then(
-                function (resultado) {
-                    console.log(resultado);
-                    res.json(resultado);
-                }
-            ).catch(
-                function (erro) {
-                    console.log(erro);
-                    console.log(
-                        "\nHouve um erro ao realizar o cadastro! Erro: ",
-                        erro.sqlMessage
-                    );
-                    res.status(500).json(erro.sqlMessage);
-                }
-            );
-    }
+            if (resultadoAutenticar.length == 1) {
+                console.log(resultadoAutenticar);
+
+                            res.json({
+                                Michael: resultadoAutenticar[0].Michael,
+                                Madonna: resultadoAutenticar[0].Madonna,
+                                Freddie: resultadoAutenticar[0].Freddie,
+                                Cazuza: resultadoAutenticar[0].Cazuza,
+                                Rita: resultadoAutenticar[0].Rita,
+                            });
+            } else if (resultadoAutenticar.length == 0) {
+                res.status(403).send("Email e/ou senha inválido(s)");
+            } else {
+                res.status(403).send("Mais de um usuário com o mesmo login e senha!");
+            }
+        }
+    ).catch(
+        function (erro) {
+            console.log(erro);
+            console.log("\nHouve um erro ao realizar o login! Erro: ", erro.sqlMessage);
+            res.status(500).json(erro.sqlMessage);
+        }
+    );
+        
+       
 }
 
 module.exports = {
     autenticar,
     cadastrar,
-    cadastrarMusica
+    viewArtistaFav
 }

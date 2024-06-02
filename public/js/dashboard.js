@@ -6,7 +6,7 @@ var dados = {
     labels: ['Michael Jackson', 'Madonna', 'Freddie Mercury', 'Cazuza', 'Rita Lee'],
     datasets: [{
         label: 'Usuários',
-        data: [120, 150, 180, 70, 200],
+        data: [sessionStorage.MICHAEL, sessionStorage.MADONNA, sessionStorage.FREDDIE, sessionStorage.CAZUZA, sessionStorage.RITA],
         backgroundColor: '#f74b6f',
     }]
 };
@@ -58,3 +58,51 @@ var myPieChart = new Chart(ctx2, {
         }
     }
 });
+console.log(sessionStorage.NOME_USUARIO);
+console.log(sessionStorage.ARTISTA_FAVORITO);
+console.log(sessionStorage.GENERO_FAVORITO);
+
+
+document.getElementById('artista_favorito').innerHTML = sessionStorage.ARTISTA_FAVORITO;
+
+fetch("/usuarios/viewArtistaFav", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        tabela: 'view_artistas_favoritos',
+    })
+}).then(function (resposta) {
+    console.log("ESTOU NO THEN DO entrar()!")
+
+    if (resposta.ok) {
+        console.log(resposta);
+
+        resposta.json().then(json => {
+            console.log(json);
+            console.log(JSON.stringify(json));
+
+            sessionStorage.MICHAEL = json.Michael;
+            sessionStorage.MADONNA = json.Madonna;
+            sessionStorage.FREDDIE = json.Freddie;
+            sessionStorage.CAZUZA = json.Cazuza;
+            sessionStorage.RITA = json.Rita;
+
+        });
+
+    } else {
+
+        console.log("Houve um erro ao tentar realizar o login!");
+        alert('Email ou senha inválidos!')
+
+        resposta.text().then(texto => {
+            console.error(texto);
+        });
+    }
+
+}).catch(function (erro) {
+    console.log(erro);
+})
+
+console.log(sessionStorage.MICHAEL);

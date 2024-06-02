@@ -37,6 +37,8 @@ function entrar() {
                 sessionStorage.EMAIL_USUARIO = json.email;
                 sessionStorage.NOME_USUARIO = json.nome;
                 sessionStorage.ID_USUARIO = json.id;
+                sessionStorage.ARTISTA_FAVORITO = json.artistaFavorito;
+                sessionStorage.GENERO_FAVORITO = json.generoFavorito;
 
                 setTimeout(function () {
                     window.location = "./index.html";

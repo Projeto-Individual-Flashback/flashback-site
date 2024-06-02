@@ -16,4 +16,8 @@ router.post("/cadastrarMusica", function (req, res) {
     usuarioController.cadastrarMusica(req, res);
 })
 
+router.post("/viewArtistaFav", function (req, res) {
+    usuarioController.viewArtistaFav(req, res);
+})
+
 module.exports = router;
