@@ -191,3 +191,38 @@ a {
     width: 50%; margin: auto;
 }
 
+#div_usuario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    text-decoration: none;
+
+    span {
+        background: linear-gradient(to right, #ddb5f9, #f3a1b3); /* Define o degradê de fundo */
+        -webkit-background-clip: text; /* Define o recorte do texto para o degradê */
+        -webkit-text-fill-color: transparent; /* Torna o texto transparente */
+    }
+
+    h5 {
+        color: #f4f4f4;
+    }
+    img {
+        width: 15%;
+        border-radius: 50px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .sair{
+        transition: 0.5s;
+    }
+
+    .sair:hover {
+        color:#a02ff2;
+        transition: 0.5s;
+    }
+
+}

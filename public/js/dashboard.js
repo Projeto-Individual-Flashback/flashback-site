@@ -185,3 +185,67 @@ fetch("/usuarios/viewArtistaFav", {
 })
 
 console.log(sessionStorage.MICHAEL);
+
+function validarSessao(){
+    console.log("foi");
+    
+
+    var nome = sessionStorage.NOME_USUARIO;
+    if( nome != undefined){
+        document.getElementById("tema-rock").style.display = 'block';
+        document.getElementById("tema-ufa").style.display = 'block';
+        document.getElementById("tema-george").style.display = 'block';
+        document.getElementById("tema-michael").style.display = 'block';
+        document.getElementById("tema-bee").style.display = 'block';
+        document.getElementById("tema-earth").style.display = 'block';
+        document.getElementById("tema-village").style.display = 'block';
+        document.getElementById("tema-kool").style.display = 'block';
+        document.getElementById("tema-cyndi").style.display = 'block';
+        document.getElementById("tema-whitney").style.display = 'block';
+        document.getElementById("tema-madonna").style.display = 'block';
+        document.getElementById("tema-roupa").style.display = 'block';
+        document.getElementById("tema-rita").style.display = 'block';
+        document.getElementById("tema-fevers").style.display = 'block';
+        document.getElementById("tema-legiao").style.display = 'block';
+        document.getElementById("tema-lulu").style.display = 'block';
+        document.getElementById("tema-leo").style.display = 'block';
+        document.getElementById("tema-barao").style.display = 'block';
+        document.getElementById("tema-paralamas").style.display = 'block';
+        document.getElementById("tema-rpm").style.display = 'block';
+
+        document.getElementById('nome_usuario').innerHTML = nome + '!';
+
+
+        document.getElementById("div_btns").style.display = "none";
+        document.getElementById("div_usuario").style.display = "flex";
+        // document.getElementById("li_dash").style.display = "flex";
+
+        let HTML = '<a href="./dashboard.html"> Dashboard </a>';
+        document.getElementById("li_dash").innerHTML = HTML;
+
+
+
+    }
+    else {
+        document.getElementById("tema-rock").style.display = 'none';
+        document.getElementById("tema-ufa").style.display = 'none';
+        document.getElementById("tema-george").style.display = 'none';
+        document.getElementById("tema-michael").style.display = 'none';
+        document.getElementById("tema-bee").style.display = 'none';
+        document.getElementById("tema-earth").style.display = 'none';
+        document.getElementById("tema-village").style.display = 'none';
+        document.getElementById("tema-kool").style.display = 'none';
+        document.getElementById("tema-cyndi").style.display = 'none';
+        document.getElementById("tema-whitney").style.display = 'none';
+        document.getElementById("tema-madonna").style.display = 'none';
+        document.getElementById("tema-roupa").style.display = 'none';
+        document.getElementById("tema-rita").style.display = 'none';
+        document.getElementById("tema-fevers").style.display = 'none';
+        document.getElementById("tema-legiao").style.display = 'none';
+        document.getElementById("tema-lulu").style.display = 'none';
+        document.getElementById("tema-leo").style.display = 'none';
+        document.getElementById("tema-barao").style.display = 'none';
+        document.getElementById("tema-paralamas").style.display = 'none';
+        document.getElementById("tema-rpm").style.display = 'none';
+    }
+}

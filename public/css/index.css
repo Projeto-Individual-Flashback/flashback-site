@@ -641,7 +641,7 @@ header.rolagem {
 }
 
 #footer {
-    height: 15vh;
+    height: 25vh;
     padding: 0 10%;
     background-color:  #0a011e;
     background-position: center;
@@ -730,10 +730,11 @@ header.rolagem {
     display: flex;
     justify-content: center;
     align-items: center;
+
     aside {
         color:#f4f4f4;
         width: 100vw;
-        height: 20vh;
+        height: 40vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
