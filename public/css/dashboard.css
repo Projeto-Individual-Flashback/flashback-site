@@ -149,19 +149,9 @@ h4 {
             color: #f74b6f; 
         }
     }
-    .div_kpi:hover {
-        color: #886cdd;
-        background-color: #0b051d;
-        border: 3px solid #886cdd;
-        box-shadow: none;
-        padding: 5%;
-        border-radius: 20px;
-        h3 {
-            color: #f4f4f4; 
-        }
-    }
-
 }
+
+
 
 a {
     text-decoration: none;

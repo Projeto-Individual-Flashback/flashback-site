@@ -89,32 +89,147 @@ const titulo_musica = document.querySelectorAll('.title-1');
 
 var title = document.querySelector('title-1');
 
-
-function add_playlist(caminho_musica) {
-    var play_music = document.getElementById(caminho_musica);
-    var caminho = './assets/src/' + caminho_musica;
-    var existe = false;
+fetch("/usuarios/trazerMusica", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        idUsuario: Number(sessionStorage.ID_USUARIO),
+    })
+    }).then(function (resposta) {
+        console.log("ESTOU NO THEN DO entrar()!")
     
-    for (var i = 0; i < playlist.length; i++) {
-        // Tem link igual no caminho? Se tiver...
-        if (playlist[i] == caminho) {
-            playlist.splice(i, 1); // Tira a musica da lista
-            existe = true;
-            play_music.classList.remove('ph-fill');
-            play_music.classList.add('ph-thin'); 
+        if (resposta.ok) {
+            console.log(resposta);
+    
+            resposta.json().then(json => {
+                console.log(json);
+                console.log(JSON.stringify(json));
+
+                const numeros = json.map(item => item.fkMusica);
+                console.log(numeros)
+                var icones = document.querySelectorAll('.ph-thin.ph-star');
+    
+                // Itera sobre os ícones
+                icones.forEach(function(icone) {
+                    
+                    var numeroDoIcone = parseInt(icone.classList[2]);
+                    
+                    // Verifica se o número está na array
+                    if (numeros.includes(numeroDoIcone)) {
+                        var play_music = document.getElementById(icone.id)
+                        play_music.classList.remove('ph-thin');
+                        play_music.classList.add('ph-fill');
+                    } 
+                });
+
+
+            });
+    
         } 
-    }  
-    if (existe == false) {
-        playlist.push(caminho); // Add a musica da lista
+    
+    }).catch(function (erro) {
+        console.log(erro);
+    })
+
+function add_playlist(caminho_musica, idMusica) {
+  
+    var play_music = document.getElementById(caminho_musica);
+
+    if (play_music.classList[0] == 'ph-thin')
+    {
         play_music.classList.remove('ph-thin');
-        play_music.classList.add('ph-fill');
+        play_music.classList.add('ph-fill'); 
+        
+        fetch("/usuarios/adicionarMusica", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            idUsuario: Number(sessionStorage.ID_USUARIO),
+            idMusica: idMusica
+        })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+        
+            if (resposta.ok) {
+                console.log(resposta);
+        
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+    
+                });
+        
+            } 
+        
+        }).catch(function (erro) {
+            console.log(erro);
+        })
     }
-    console.log(playlist);
+    else
+    {
+        play_music.classList.remove('ph-fill');
+        play_music.classList.add('ph-thin'); 
+        
+        fetch("/usuarios/deletarMusica", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            idUsuario: Number(sessionStorage.ID_USUARIO),
+            idMusica: idMusica
+        })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+        
+            if (resposta.ok) {
+                console.log(resposta);
+        
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+    
+                });
+        
+            } 
+        
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+    }
+    
+
+    // var play_music = document.getElementById(caminho_musica);
+    // var caminho = './assets/src/' + caminho_musica;
+    // var existe = false;
+    
+    // for (var i = 0; i < playlist.length; i++) {
+    //     // Tem link igual no caminho? Se tiver...
+    //     if (playlist[i] == caminho) {
+    //         playlist.splice(i, 1); // Tira a musica da lista
+    //         existe = true;
+    //         play_music.classList.remove('ph-fill');
+    //         play_music.classList.add('ph-thin'); 
+    //     } 
+    // }  
+    // if (existe == false) {
+    //     playlist.push(caminho); // Add a musica da lista
+    //     play_music.classList.remove('ph-thin');
+    //     play_music.classList.add('ph-fill');
+    // }
+    // console.log(playlist);
     
 
 }
 // usar JSON aqui:
 function validarSessao(){
+    console.log("foi");
+    
+
     var nome = sessionStorage.NOME_USUARIO;
     if( nome != undefined){
         document.getElementById("tema-rock").style.display = 'block';

@@ -126,8 +126,125 @@ function viewArtistaFav(req, res) {
        
 }
 
+function adicionarMusica(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var idMusica = req.body.idMusica;
+    var idUsuario = req.body.idUsuario;
+
+
+    // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+    usuarioModel.adicionarMusica(idMusica, idUsuario)
+        .then(
+            function (resultado) {
+                console.log(resultado);
+                res.json(resultado);
+            }
+        ).catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "\nHouve um erro ao realizar o cadastro! Erro: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+    
+}
+
+function trazerMusica(req, res) {
+    var idUsuario = req.body.idUsuario;
+
+    usuarioModel.trazerMusica(idUsuario)
+    .then(
+        function (resultado) {
+            console.log(resultado);
+            res.json(resultado);
+        }
+    ).catch(
+        function (erro) {
+            console.log(erro);
+            console.log(
+                "\nHouve um erro ao realizar o cadastro! Erro: ",
+                erro.sqlMessage
+            );
+            res.status(500).json(erro.sqlMessage);
+        }
+    );
+}
+
+function deletarMusica(req, res) {
+    var idMusica  = req.body.idMusica;
+    var idUsuario = req.body.idUsuario;
+
+    usuarioModel.deletarMusica(idMusica, idUsuario)
+    .then(
+        function (resultado) {
+            console.log(resultado);
+            res.json(resultado);
+        }
+    ).catch(
+        function (erro) {
+            console.log(erro);
+            console.log(
+                "\nHouve um erro ao realizar o cadastro! Erro: ",
+                erro.sqlMessage
+            );
+            res.status(500).json(erro.sqlMessage);
+        }
+    );
+}
+
+function musicasFav(req, res) {
+    var tabela  = req.body.tabela;
+
+    usuarioModel.musicasFav(tabela)
+    .then(
+        function (resultado) {
+            console.log(resultado);
+            res.json(resultado);
+        }
+    ).catch(
+        function (erro) {
+            console.log(erro);
+            console.log(
+                "\nHouve um erro ao realizar o cadastro! Erro: ",
+                erro.sqlMessage
+            );
+            res.status(500).json(erro.sqlMessage);
+        }
+    );
+}
+
+function qtdMusicas(req, res) {
+    var idUsuario  = req.body.idUsuario;
+
+    usuarioModel.qtdMusicas(idUsuario)
+    .then(
+        function (resultado) {
+            console.log(resultado);
+            res.json(resultado);
+        }
+    ).catch(
+        function (erro) {
+            console.log(erro);
+            console.log(
+                "\nHouve um erro ao realizar o cadastro! Erro: ",
+                erro.sqlMessage
+            );
+            res.status(500).json(erro.sqlMessage);
+        }
+    );
+}
+
+
 module.exports = {
     autenticar,
     cadastrar,
-    viewArtistaFav
+    viewArtistaFav,
+    adicionarMusica,
+    deletarMusica,
+    trazerMusica,
+    musicasFav,
+    qtdMusicas
 }

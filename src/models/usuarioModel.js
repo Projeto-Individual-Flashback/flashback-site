@@ -66,10 +66,65 @@ function viewArtistaFav(tabela)
     return database.executar(instrucaoSql);
 }
 
+function adicionarMusica(idMusica, idUsuario) {
+    var instrucaoSql = `
+        INSERT INTO playlist (fkUsuario, fkMusica) VALUES ('${idUsuario}', '${idMusica}');
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+function deletarMusica(idMusica, idUsuario) {
+    var instrucaoSql = `
+        DELETE FROM playlist WHERE fkUsuario = ${idUsuario} AND fkMusica = ${idMusica};
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+function trazerMusica(idUsuario)
+{
+    var instrucaoSql = `
+    SELECT fkMusica FROM playlist WHERE fkUsuario = ${idUsuario};
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+function musicasFav(tabela) {
+    var instrucaoSql = `
+        SELECT fkMusica, titulo,
+        COUNT(fkMusica) AS quantidadeEscolhas
+        FROM ${tabela}
+        LEFT JOIN musica
+        ON idMusica = fkMusica
+        GROUP BY fkMusica
+        ORDER BY quantidadeEscolhas DESC
+        LIMIT 3;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+function qtdMusicas(idUsuario) {
+    var instrucaoSql = `
+    SELECT COUNT(fkMusica) AS quantidade
+    FROM playlist
+    WHERE fkUsuario = ${idUsuario};
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
     autenticar,
     cadastrar,
     cadastrarMusica,
-    viewArtistaFav
+    viewArtistaFav,
+    adicionarMusica,
+    deletarMusica,
+    trazerMusica,
+    musicasFav,
+    qtdMusicas
 };
 

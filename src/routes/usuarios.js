@@ -20,4 +20,24 @@ router.post("/viewArtistaFav", function (req, res) {
     usuarioController.viewArtistaFav(req, res);
 })
 
+router.post("/adicionarMusica", function (req, res) {
+    usuarioController.adicionarMusica(req, res);
+})
+
+router.post("/trazerMusica", function (req, res) {
+    usuarioController.trazerMusica(req, res);
+})
+
+router.post("/deletarMusica", function (req, res) {
+    usuarioController.deletarMusica(req, res);
+})
+
+router.post("/musicasFav", function (req, res) {
+    usuarioController.musicasFav(req, res);
+})
+
+router.post("/qtdMusicas", function (req, res) {
+    usuarioController.qtdMusicas(req, res);
+})
+
 module.exports = router;

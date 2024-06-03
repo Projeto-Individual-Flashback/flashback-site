@@ -671,27 +671,6 @@ header.rolagem {
     }
 }
 
-#minha_playlist {
-    display: flex;
-    flex-direction: column;
-    color: #f4f4f4;
-    background-color: #140535;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    width: 100%;
-
-    .div_playlist {
-        border-radius: 10px;
-        color: #f4f4f4;
-        display: flex;
-        background: linear-gradient(to right, rgb(242, 47, 47), #f74b6f);
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-        width: 50%;
-    }
-}
 
 #div_btns {
     display: flex;
@@ -776,7 +755,7 @@ header.rolagem {
 }
 
 .festas1 {
-    background-color: #31146f;
+    background-color: #140535;
 }
 .festas2 {
     background-color: #250d5a;
