@@ -9,6 +9,9 @@ function cadastrar() {
     var artistaVar = sel_artista.value;
     var generoVar = sel_genero.value; 
     console.log(generoVar);
+    if (emailVar) {
+
+    }
     if (
       nomeVar == "" ||
       sobrenomeVar == "" ||
@@ -20,7 +23,7 @@ function cadastrar() {
     ) {
       // cardErro.style.display = "block";
       // mensagem_erro.innerHTML =
-       alert('Mensagem de erro para todos os campos em branco');
+       alert('Todos os campos devem ser preenchidos');
 
       return false;
     } else {
@@ -53,10 +56,24 @@ function cadastrar() {
           return; // Encerra a execução do código nesta etapa
         
         }
-        if (resposta.ok) {
-          // cardErro.style.display = "block";
+        if (emailVar.indexOf('@') == -1) {
+          alert('Seu email deve conter @');
 
-          // mensagem_erro.innerHTML =
+        } else if (senhaVar.length <= 6) {
+            alert('Sua senha está fraca');
+        }
+
+        // var lista_caracteres = ['@', '.', '_', '#'];
+
+        //   for (var i = 0; i < lista_caracteres.length; i++) {
+          
+        //     if (lista_caracteres.includes(senhaVar[i])) {
+        //       return true;
+        //     }
+        //     return false;
+        //   } 
+        
+        else if (resposta.ok) {
           alert('Cadastro realizado com sucesso! Redirecionando para tela de Login...');
 
           setTimeout(() => {

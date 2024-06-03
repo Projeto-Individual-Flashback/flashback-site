@@ -643,7 +643,8 @@ header.rolagem {
 #footer {
     height: 25vh;
     padding: 0 10%;
-    background-color:  #0a011e;
+    /* background-color:  #0a011e; */
+    background: linear-gradient(to right, #a02ff2, #f74b6f);
     background-position: center;
     display: flex;
     justify-content: space-around;
@@ -687,7 +688,7 @@ header.rolagem {
     text-decoration: none;
 
     span {
-        background: linear-gradient(to right, #ddb5f9, #f3a1b3); /* Define o degradê de fundo */
+        background: linear-gradient(to right, #e8c9ff, #f5b1c0); /* Define o degradê de fundo */
         -webkit-background-clip: text; /* Define o recorte do texto para o degradê */
         -webkit-text-fill-color: transparent; /* Torna o texto transparente */
     }
@@ -760,6 +761,18 @@ header.rolagem {
     background-color: #140535;
 }
 .festas2 {
-    background-color: #250d5a;
+    /* background-color: #f4f4f4; */
+    background-color: #0a011e;
+    /* background: linear-gradient(to left, #a02ff2, #f74b6f); */
+    /* aside {
+        h1 {
+            color: #140535;
+        }
+        p {
+            color: #140535;
+        }
+        h5 {
+            color: #140535;
+        }
+    } */
 }
-

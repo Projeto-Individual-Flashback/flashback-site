@@ -49,7 +49,10 @@ fetch("/usuarios/musicasFav", {
                     responsive: true, // Gráfico responsivo
                     plugins: {
                         legend: {
-                            position: 'top', // Posição da legenda
+                            position: 'top',
+                            labels: {
+                                color: 'white'
+                            }
                         },
                         tooltip: {
                             enabled: true // Habilitar tooltips
@@ -148,16 +151,32 @@ fetch("/usuarios/viewArtistaFav", {
                 datasets: [{
                     label: 'Usuários',
                     data: [sessionStorage.MICHAEL, sessionStorage.MADONNA, sessionStorage.FREDDIE, sessionStorage.CAZUZA, sessionStorage.RITA],
-                    backgroundColor: '#f74b6f',
-                }]
+                    backgroundColor: '#f74b6f'
+                }],
+                
             };
 
             // Configurações do gráfico
             var opcoes = {
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: 'white'
+                        }
+                    }
+                },
                 scales: {
                     y: {
-                        beginAtZero: true
-                    }
+                        beginAtZero: true,
+                        ticks: {
+                            color: 'white',
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: 'white',
+                        }
+                    } 
                 }
             };
 

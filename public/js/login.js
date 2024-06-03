@@ -5,7 +5,7 @@ function entrar() {
     var senhaVar = ipt_senha.value;
 
     if (emailVar == "" || senhaVar == "") {
-        alert('Mensagem de erro para todos os campos em branco');
+        alert('Todos os campos devem ser preenchidos');
         
         return false;
     }
