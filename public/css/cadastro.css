@@ -56,18 +56,17 @@ select {
 }
 
 
-.gif {
-    width: 100px;
-    position: absolute;
-    margin-top: -40px;
+.gif img {
+    width: 150px;
+    position: fixed;
+    z-index: 99;
+    margin-top: -70px;
     transition: 1s;
+    margin-left: 250px;
+    pointer-events: none;
 }
 
-.gif:hover {
-    width: 200px;
-    transition: 1s;
-    margin-top: -80px;
-}
+
 .div-total {
     background-color: #140535;
     width: 100vh;

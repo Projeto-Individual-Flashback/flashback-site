@@ -748,13 +748,24 @@ header.rolagem {
         }
 
     }
-    article {
+
+    .texto1 {
+        margin-right: 10vw;      
+        
+    }
+    .texto2 {
         margin-left: 10vw;
+
+    }
+    .texto3 {
+        margin-right: 10vw;      
+
     }
     img {
         border-radius: 25px;
     }
 }
+
 
 .festas1 {
     background-color: #140535;
@@ -805,7 +816,7 @@ header.rolagem {
 
     }
     article {
-        margin-right: 10vw;
+        margin-left: 10vw;
     }
     img {
         border-radius: 25px;

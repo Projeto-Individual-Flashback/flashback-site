@@ -44,9 +44,10 @@ h4 {
     
 }
 
-.gif {
+.gif img {
     width: 200px;
-    position: absolute;
+    position: fixed;
+    z-index: 99;
     margin-top: -70px;
     transition: 1s;
     margin-right: 1000px;
