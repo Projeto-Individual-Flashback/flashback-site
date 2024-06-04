@@ -26,11 +26,16 @@ function cadastrar() {
        alert('Todos os campos devem ser preenchidos');
 
       return false;
-    } else {
-      setInterval(sumirMensagem, 5000);
-    }
+    } else if (emailVar.indexOf('@') == -1) {
+      alert('Seu email deve conter @');
 
-    // Enviando o valor da nova input
+    } else if (senhaVar.length <= 6) {
+        alert('Sua senha está fraca');
+    } 
+    else {
+      setInterval(sumirMensagem, 5000);
+
+      // Enviando o valor da nova input
     fetch("/usuarios/cadastrar", {
       method: "POST",
       headers: {
@@ -55,12 +60,6 @@ function cadastrar() {
           alert('As senhas não coincidem. Por favor, verifique e tente novamente.');
           return; // Encerra a execução do código nesta etapa
         
-        }
-        if (emailVar.indexOf('@') == -1) {
-          alert('Seu email deve conter @');
-
-        } else if (senhaVar.length <= 6) {
-            alert('Sua senha está fraca');
         }
 
         // var lista_caracteres = ['@', '.', '_', '#'];
@@ -88,6 +87,9 @@ function cadastrar() {
       .catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
       });
+    }
+
+    
 
     return false;
   }

@@ -65,9 +65,6 @@ fetch("/usuarios/musicasFav", {
 
     } else {
 
-        console.log("Houve um erro ao tentar realizar o login!");
-        alert('Email ou senha inválidos!')
-
         resposta.text().then(texto => {
             console.error(texto);
         });
@@ -190,10 +187,6 @@ fetch("/usuarios/viewArtistaFav", {
         });
 
     } else {
-
-        console.log("Houve um erro ao tentar realizar o login!");
-        alert('Email ou senha inválidos!')
-
         resposta.text().then(texto => {
             console.error(texto);
         });
@@ -204,6 +197,7 @@ fetch("/usuarios/viewArtistaFav", {
 })
 
 console.log(sessionStorage.MICHAEL);
+document.getElementById('nome_usuario').innerHTML = sessionStorage.NOME_USUARIO + '!';
 
 function validarSessao(){
     console.log("foi");
@@ -233,7 +227,6 @@ function validarSessao(){
         document.getElementById("tema-rpm").style.display = 'block';
 
         document.getElementById('nome_usuario').innerHTML = nome + '!';
-
 
         document.getElementById("div_btns").style.display = "none";
         document.getElementById("div_usuario").style.display = "flex";
