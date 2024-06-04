@@ -110,7 +110,7 @@ header {
             color: #f4f4f4;
             text-decoration: none;
             font-size: 16px;
-            padding: 6px 20px;
+            padding: 6px 10px;
             transition: 0.5s;
         }
         a:hover{
@@ -162,8 +162,7 @@ header.rolagem {
     transition: 2s;
 } 
 
-.div-btns {
-    width: 22%;
+#div_btns {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -192,7 +191,7 @@ header.rolagem {
 }
 
 .btn-login {
-    width:8vw;
+    width:6vw;
 }
 
 .btn-cadastro {
@@ -775,4 +774,40 @@ header.rolagem {
             color: #140535;
         }
     } */
+}
+
+
+#obj_onu {
+    height: 60vh;
+    padding: 0 10%;
+    background-color: #f4f4f4; 
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    aside {
+        color:#140535;
+        width: 100vw;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 25%;
+        }
+
+    }
+    article {
+        margin-right: 10vw;
+    }
+    img {
+        border-radius: 25px;
+    }
 }
