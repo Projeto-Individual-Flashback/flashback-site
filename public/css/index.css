@@ -191,7 +191,7 @@ header.rolagem {
 }
 
 .btn-login {
-    width:6vw;
+    width:10vw;
 }
 
 .btn-cadastro {
@@ -213,7 +213,8 @@ header.rolagem {
 .btn2  {
     width: 100%;
     border: 2px solid #a02ff2; /* Borda */
-    background: linear-gradient(to right, #a02ff2, #f74b6f);
+    /* background: linear-gradient(to right, #a02ff2, #f74b6f); */
+    background: #a02ff2; 
     color: #f4f4f4; /* Cor do texto */
 }
 
@@ -671,8 +672,6 @@ header.rolagem {
     }
 }
 
-
-
 #div_btns {
     display: flex;
     width: 400px;
@@ -801,7 +800,7 @@ header.rolagem {
     aside {
         color:#140535;
         width: 100vw;
-        height: 40vh;
+        height: 30vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;

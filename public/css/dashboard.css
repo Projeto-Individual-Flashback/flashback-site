@@ -45,12 +45,13 @@ h4 {
 }
 
 .gif img {
-    width: 200px;
+    width: 150px;
     position: fixed;
     z-index: 99;
     margin-top: -70px;
     transition: 1s;
-    margin-right: 1000px;
+    margin-left: 150px;
+    pointer-events: none;
 }
 
 .gif:hover {
