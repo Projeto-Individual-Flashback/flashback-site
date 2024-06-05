@@ -91,6 +91,10 @@ header {
     transition: 1s;
     z-index: 998;
 
+    .btn2 {
+        border-color: #f74b6f;
+    }
+
 
     /* background-color: aqua; */
 
@@ -127,8 +131,12 @@ header {
 
 header.rolagem {
     padding: 1vh 3%;
-    background: linear-gradient(to right, #a02ff2, #f74b6f);
+    /* background: linear-gradient(to right, #a02ff2, #f74b6f); */
+    background: #a02ff2;
     transition: 1;
+
+    .btn2 {
+    }
 }
 
 /* HEADER - Menu com opções que desce (Eventos) */
@@ -212,9 +220,9 @@ header.rolagem {
 
 .btn2  {
     width: 100%;
-    border: 2px solid #a02ff2; /* Borda */
+    border: 2px solid #f4f4f4; /* Borda */
     /* background: linear-gradient(to right, #a02ff2, #f74b6f); */
-    background: #a02ff2; 
+    background: #f74b6f; 
     color: #f4f4f4; /* Cor do texto */
 }
 
@@ -357,7 +365,7 @@ header.rolagem {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f4f4f4;
+    background-color: #f7dce2;
     height: 12vh;
     color: #140535;
     .div-respiro {
@@ -374,7 +382,7 @@ header.rolagem {
 #evento-rir {
     height: 100vh;
     padding: 0 10%;
-    background-color: #e0e0e0;
+    background-color: #f4f4f4;
     background-position: center;
     display: flex;
     justify-content: center;
@@ -510,7 +518,7 @@ header.rolagem {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e0e0e0;
+    background-color: #f7dce2;
     height: 12vh;
     color: #140535;
     .div-respiro {
@@ -528,7 +536,7 @@ header.rolagem {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f4f4f4;
+    background-color: #f7dce2;
     height: 12vh;
     color: #140535;
     .div-respiro {
@@ -641,15 +649,20 @@ header.rolagem {
 }
 
 #footer {
-    height: 25vh;
+    height: 15vh;
     padding: 0 10%;
     /* background-color:  #0a011e; */
-    background: linear-gradient(to right, #a02ff2, #f74b6f);
+    /* background: linear-gradient(to right, #a02ff2, #f74b6f); */
+    background: #a02ff2;
     background-position: center;
     display: flex;
     justify-content: space-around;
     align-items: center;
     color:#f4f4f4;
+
+    .credito {
+        
+    }
 }
 
 
@@ -685,10 +698,14 @@ header.rolagem {
     width: 400px;
     text-decoration: none;
 
-    span {
-        background: linear-gradient(to right, #e8c9ff, #f5b1c0); /* Define o degradê de fundo */
-        -webkit-background-clip: text; /* Define o recorte do texto para o degradê */
-        -webkit-text-fill-color: transparent; /* Torna o texto transparente */
+    span { /* Nome do usuario */
+        
+        /* background: linear-gradient(to right, #e8c9ff, #f5b1c0);   Define o degradê de fundo 
+        -webkit-background-clip: text; Define o recorte do texto para o degradê 
+        -webkit-text-fill-color: transparent;  Torna o texto transparente  */
+        color: #f7dce2;
+
+        
     }
 
     h5 {
@@ -704,6 +721,7 @@ header.rolagem {
     }
 
     .sair{
+        margin-left: 30px;
         transition: 0.5s;
     }
 
@@ -821,3 +839,4 @@ header.rolagem {
         border-radius: 25px;
     }
 }
+

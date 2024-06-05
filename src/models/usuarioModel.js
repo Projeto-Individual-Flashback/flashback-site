@@ -116,6 +116,16 @@ function qtdMusicas(idUsuario) {
     return database.executar(instrucaoSql);
 }
 
+function genFavorito(idUsuario) {
+    var instrucaoSql = `
+    SELECT generoFavorito 
+    FROM usuario 
+    WHERE idUsuario = ${idUsuario};
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
     autenticar,
     cadastrar,
@@ -125,6 +135,7 @@ module.exports = {
     deletarMusica,
     trazerMusica,
     musicasFav,
-    qtdMusicas
+    qtdMusicas,
+    genFavorito
 };
 

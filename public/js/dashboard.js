@@ -1,11 +1,8 @@
 
-
-
-
-
 // Obtém o contexto do canvas onde o gráfico será desenhado
 var ctx2 = document.getElementById('myPieChart').getContext('2d');
 
+// GRAFICO TOP 3 MUSICAS
 var dataMusicaFav;
 
 fetch("/usuarios/musicasFav", {
@@ -17,7 +14,7 @@ fetch("/usuarios/musicasFav", {
         tabela: 'playlist',
     })
 }).then(function (resposta) {
-    console.log("ESTOU NO THEN DO entrar()!")
+    console.log("ESTOU NO THEN DO musicaFav()!")
 
     if (resposta.ok) {
         console.log(resposta);
@@ -74,6 +71,8 @@ fetch("/usuarios/musicasFav", {
     console.log(erro);
 })
 
+
+// KPI QUANTIDADE DE MUSICAS DOS USUARIOS
 fetch("/usuarios/qtdMusicas", {
     method: "POST",
     headers: {
@@ -83,7 +82,7 @@ fetch("/usuarios/qtdMusicas", {
         idUsuario: Number(sessionStorage.ID_USUARIO)
     })
 }).then(function (resposta) {
-    console.log("ESTOU NO THEN DO entrar()!")
+    console.log("ESTOU NO THEN DO qtdMusicas()!")
 
     if (resposta.ok) {
         console.log(resposta);
@@ -115,6 +114,7 @@ setTimeout(function () {
 
 
 
+// GRAFICO ARTISTAS FAVORITOS DOS USUARIOS
 fetch("/usuarios/viewArtistaFav", {
     method: "POST",
     headers: {
@@ -260,4 +260,46 @@ function validarSessao(){
         document.getElementById("tema-paralamas").style.display = 'none';
         document.getElementById("tema-rpm").style.display = 'none';
     }
+}
+
+
+// KPI GENERO FAVORITO
+var id = sessionStorage.ID_USUARIO;
+fetch("/usuarios/genFavorito", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        idUsuario: id
+    })
+}).then(function (resposta) {
+    console.log("ESTOU NO THEN DO entrar()!")
+
+    if (resposta.ok) {
+        console.log(resposta);
+
+        resposta.json().then(json => {
+            console.log(json);
+            console.log(JSON.stringify(json));
+
+            sessionStorage.id = json.id;
+            plotarGrafico(json);
+            
+
+        });
+
+    } else {
+
+        resposta.text().then(texto => {
+            console.error(texto);
+        });
+    }
+
+}).catch(function (erro) {
+    console.log(erro);
+})
+function plotarGrafico(dados){
+    let genero = dados.map(item => item.generoFavorito);
+    document.getElementById('gen_favorito').innerHTML = genero;
 }

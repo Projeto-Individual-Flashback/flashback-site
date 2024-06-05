@@ -40,4 +40,8 @@ router.post("/qtdMusicas", function (req, res) {
     usuarioController.qtdMusicas(req, res);
 })
 
+router.post("/genFavorito", function (req, res) {
+    usuarioController.genFavorito(req, res);
+})
+
 module.exports = router;

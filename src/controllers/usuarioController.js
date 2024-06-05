@@ -237,6 +237,27 @@ function qtdMusicas(req, res) {
     );
 }
 
+function genFavorito(req, res) {
+    var idUsuario  = req.body.idUsuario;
+
+    usuarioModel.genFavorito(idUsuario)
+    .then(
+        function (resultado) {
+            console.log(resultado);
+            res.json(resultado);
+        }
+    ).catch(
+        function (erro) {
+            console.log(erro);
+            console.log(
+                "\nHouve um erro ao realizar o cadastro! Erro: ",
+                erro.sqlMessage
+            );
+            res.status(500).json(erro.sqlMessage);
+        }
+    );
+}
+
 
 module.exports = {
     autenticar,
@@ -246,5 +267,6 @@ module.exports = {
     deletarMusica,
     trazerMusica,
     musicasFav,
-    qtdMusicas
+    qtdMusicas,
+    genFavorito
 }

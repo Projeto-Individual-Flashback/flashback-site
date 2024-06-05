@@ -145,7 +145,7 @@ h4 {
         border: 1px solid #f4f4f4;
         box-shadow: none;
         padding: 5%;
-        border-radius: 20px;
+        border-radius: 15px;
 
         h3 {
             color: #f74b6f; 
@@ -199,11 +199,12 @@ a {
     align-items: center;
     width: 300px;
     text-decoration: none;
+    background-color: #220958;
+    border-radius: 10px;
+    padding: 20px;
 
     span {
-        background: linear-gradient(to right, #ddb5f9, #f3a1b3); /* Define o degradê de fundo */
-        -webkit-background-clip: text; /* Define o recorte do texto para o degradê */
-        -webkit-text-fill-color: transparent; /* Torna o texto transparente */
+        color: #f7dce2;
     }
 
     h5 {
@@ -220,6 +221,7 @@ a {
 
     .sair{
         transition: 0.5s;
+        margin-left: 30px;
     }
 
     .sair:hover {

@@ -149,8 +149,9 @@ select {
     
     .btn2  {
         width: 50%;
-        border: 2px solid #a02ff2; /* Borda */
-        background: linear-gradient(to right, #a02ff2, #f74b6f);
+        border: 2px solid #f74b6f;
+        /* background: linear-gradient(to right, #a02ff2, #f74b6f); */
+        background: #f74b6f;
         color: #f4f4f4; /* Cor do texto */
     }
 

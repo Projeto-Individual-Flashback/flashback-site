@@ -202,30 +202,8 @@ function add_playlist(caminho_musica, idMusica) {
         })
     }
     
-
-    // var play_music = document.getElementById(caminho_musica);
-    // var caminho = './assets/src/' + caminho_musica;
-    // var existe = false;
-    
-    // for (var i = 0; i < playlist.length; i++) {
-    //     // Tem link igual no caminho? Se tiver...
-    //     if (playlist[i] == caminho) {
-    //         playlist.splice(i, 1); // Tira a musica da lista
-    //         existe = true;
-    //         play_music.classList.remove('ph-fill');
-    //         play_music.classList.add('ph-thin'); 
-    //     } 
-    // }  
-    // if (existe == false) {
-    //     playlist.push(caminho); // Add a musica da lista
-    //     play_music.classList.remove('ph-thin');
-    //     play_music.classList.add('ph-fill');
-    // }
-    // console.log(playlist);
-    
-
 }
-// usar JSON aqui:
+
 function validarSessao(){
     console.log("foi");
     
